@@ -18,18 +18,13 @@
       --blue:   #4f8aff;
       --purple: #a855f7;
       --coral:  #ff6b6b;
+      --green:  #34d399;
+      --orange: #f97316;
       --text:   #e2e8f8;
       --muted:  #6b789a;
       --border: rgba(255,255,255,0.08);
       --fh:     'Bricolage Grotesque', sans-serif;
       --fb:     'Nunito', sans-serif;
-      /* language colors */
-      --lc-csharp:     #a855f7;
-      --lc-python:     #3b82f6;
-      --lc-typescript: #60a5fa;
-      --lc-javascript: #fbbf24;
-      --lc-shell:      #00e0cc;
-      --lc-default:    #6b7280;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -37,7 +32,6 @@
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
     a{text-decoration:none;color:inherit}
-
     body::after{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999}
 
     /* LANG */
@@ -57,7 +51,7 @@
     .nav-gh:hover{border-color:var(--gold);color:var(--gold)}
 
     /* HERO */
-    .hero{position:relative;min-height:82vh;display:flex;align-items:center;justify-content:center;padding:7rem clamp(1.5rem,5vw,4rem) 4rem;overflow:hidden;text-align:center}
+    .hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;padding:7rem clamp(1.5rem,5vw,4rem) 4rem;overflow:hidden;text-align:center}
     #hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
     .hero-glow-a{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.1) 0%,transparent 65%);top:40%;left:20%;transform:translate(-50%,-50%);pointer-events:none}
     .hero-glow-b{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(79,138,255,.1) 0%,transparent 65%);top:60%;right:15%;pointer-events:none}
@@ -77,56 +71,82 @@
     .hero-counter strong{color:var(--gold);font-family:var(--fh);font-size:1.1rem}
     @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
-    /* PROJECTS */
+    /* PROJECTS SECTION */
     .projects-section{padding:5rem clamp(1.5rem,5vw,4rem) 6rem}
-    .container{max-width:1180px;margin:0 auto}
-    .sec-header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+    .container{max-width:1200px;margin:0 auto}
+    .sec-header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:3.5rem}
     .sec-title{font-family:var(--fh);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;color:#fff}
     .sec-title em{font-style:normal;color:var(--teal)}
-    .topic-hint{font-size:.75rem;color:var(--muted);font-weight:600;text-align:right;line-height:1.5;max-width:280px}
-    .topic-hint code{color:var(--gold);background:rgba(255,194,75,.08);padding:.1rem .4rem;border-radius:3px;font-size:.72rem}
+    .topic-hint{font-size:.75rem;color:var(--muted);font-weight:600;text-align:right;line-height:1.6;max-width:300px}
+    .topic-hint code{color:var(--gold);background:rgba(255,194,75,.08);padding:.1rem .4rem;border-radius:3px;font-size:.7rem}
 
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.5rem}
+    /* CATEGORY SECTION */
+    .cat-section{margin-bottom:4rem}
+    .cat-section:last-child{margin-bottom:0}
+    .cat-header{display:flex;align-items:center;gap:.85rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+    .cat-icon-wrap{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
+    .cat-name{font-family:var(--fh);font-size:1.15rem;font-weight:800;letter-spacing:-.02em;color:#fff}
+    .cat-count{font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--muted);background:rgba(255,255,255,.06);padding:.18rem .6rem;border-radius:20px;margin-left:.3rem}
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.25rem}
 
-    /* Project card */
-    .proj-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;position:relative}
-    .proj-card:hover{transform:translateY(-5px);box-shadow:0 12px 40px rgba(0,0,0,.4)}
-    .proj-card-bar{height:3px;width:100%}
-    .proj-card-body{padding:1.75rem;flex:1;display:flex;flex-direction:column;gap:1rem}
-    .proj-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
-    .proj-name{font-family:var(--fh);font-size:1.1rem;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.2}
-    .proj-stars{display:flex;align-items:center;gap:.3rem;font-size:.75rem;color:var(--muted);font-weight:700;flex-shrink:0}
+    /* PROJECT CARD */
+    .proj-card{background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
+    .proj-card:hover{transform:translateY(-5px);box-shadow:0 14px 44px rgba(0,0,0,.4)}
+    .proj-card-bar{height:3px;width:100%;flex-shrink:0}
+    .proj-card-body{padding:1.6rem;flex:1;display:flex;flex-direction:column;gap:.85rem}
+
+    /* Top row: name + status */
+    .proj-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem}
+    .proj-name{font-family:var(--fh);font-size:1.05rem;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.25}
+    .status-badge{display:inline-flex;align-items:center;gap:.3rem;padding:.2rem .6rem;border-radius:20px;font-size:.65rem;font-weight:800;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;border:1px solid}
+
+    /* Version + last updated */
+    .proj-meta{display:flex;align-items:center;gap:.6rem;font-size:.72rem;color:var(--muted);font-weight:700;flex-wrap:wrap}
+    .proj-version{display:inline-flex;align-items:center;gap:.3rem;font-family:monospace;font-size:.75rem;color:var(--gold);background:rgba(255,194,75,.07);padding:.15rem .5rem;border-radius:4px;border:1px solid rgba(255,194,75,.15)}
+    .proj-version.ver-loading{color:var(--muted);border-color:transparent;background:rgba(255,255,255,.04);animation:pulse-ver 1.5s ease infinite}
+    @keyframes pulse-ver{0%,100%{opacity:.4}50%{opacity:.9}}
+    .proj-updated{font-size:.7rem;color:var(--muted);font-weight:600}
+
+    /* Description */
     .proj-desc{font-size:.85rem;color:var(--muted);line-height:1.75;flex:1}
-    .proj-topics{display:flex;gap:.4rem;flex-wrap:wrap}
-    .proj-topic{font-size:.65rem;font-weight:800;letter-spacing:.06em;padding:.18rem .55rem;border-radius:20px;background:rgba(255,255,255,.05);color:var(--muted);border:1px solid rgba(255,255,255,.07)}
-    .proj-topic.tp-portfolio{background:rgba(255,194,75,.08);color:rgba(255,194,75,.6);border-color:rgba(255,194,75,.15)}
-    .proj-lang{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:800;letter-spacing:.04em}
-    .proj-lang-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
-    .proj-card-footer{padding:1rem 1.75rem 1.5rem;display:flex;gap:.75rem;border-top:1px solid var(--border)}
-    .proj-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.55rem 1rem;border-radius:8px;font-size:.78rem;font-weight:800;letter-spacing:.03em;transition:all .15s;cursor:pointer;border:none}
+
+    /* Progress bar */
+    .proj-progress-wrap{display:flex;flex-direction:column;gap:.35rem}
+    .proj-progress-label{display:flex;justify-content:space-between;align-items:center}
+    .proj-progress-stage{font-size:.68rem;font-weight:800;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+    .proj-progress-pct{font-size:.68rem;font-weight:700;color:var(--muted)}
+    .proj-progress-track{height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+    .proj-progress-fill{height:100%;border-radius:2px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+
+    /* Topics */
+    .proj-topics{display:flex;gap:.35rem;flex-wrap:wrap}
+    .proj-topic{font-size:.62rem;font-weight:800;letter-spacing:.06em;padding:.15rem .5rem;border-radius:20px;background:rgba(255,255,255,.04);color:var(--muted);border:1px solid rgba(255,255,255,.07)}
+    .proj-topic.tp-featured{background:rgba(255,194,75,.07);color:rgba(255,194,75,.55);border-color:rgba(255,194,75,.12);display:none}
+
+    /* Card footer */
+    .proj-card-footer{padding:.85rem 1.6rem 1.35rem;display:flex;gap:.65rem;border-top:1px solid var(--border)}
+    .proj-btn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.55rem .85rem;border-radius:8px;font-size:.78rem;font-weight:800;letter-spacing:.02em;transition:all .15s;cursor:pointer;border:none}
     .proj-btn-gh{background:rgba(255,255,255,.06);color:var(--text)}
     .proj-btn-gh:hover{background:rgba(255,255,255,.12)}
-    .proj-btn-demo{background:var(--gold);color:#0a0c14}
-    .proj-btn-demo:hover{background:#ffd47a}
+    .proj-btn-site{background:var(--gold);color:#0a0c14}
+    .proj-btn-site:hover{background:#ffd47a;transform:translateY(-1px)}
 
-    /* Loading / Error */
-    .load-state{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--muted)}
+    /* Load / error states */
+    .load-state{text-align:center;padding:4rem 2rem;color:var(--muted);font-size:.9rem}
     .load-state::before{content:'';display:block;width:36px;height:36px;border:2px solid rgba(255,194,75,.15);border-top-color:var(--gold);border-radius:50%;margin:0 auto 1.25rem;animation:spin .8s linear infinite}
     @keyframes spin{to{transform:rotate(360deg)}}
-    .err-state{grid-column:1/-1;text-align:center;padding:3rem 2rem}
-    .err-state p{color:var(--muted);margin-bottom:1rem;font-size:.9rem}
+    .err-state{text-align:center;padding:3rem 2rem;color:var(--muted);font-size:.9rem}
     .err-state a{color:var(--gold)}
-    .empty-state{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--muted);font-size:.9rem}
 
     /* FOOTER */
     footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem clamp(1.5rem,5vw,4rem);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
     .foot-brand{font-family:var(--fh);font-size:1.1rem;font-weight:800;color:#fff}
     .foot-brand em{font-style:normal;color:var(--gold)}
     .foot-copy{font-size:.75rem;color:var(--muted)}
-    .foot-gh{font-size:.8rem;color:var(--muted);transition:color .2s}
-    .foot-gh:hover{color:var(--gold)}
+    .foot-hint{font-size:.72rem;color:var(--muted);line-height:1.6;text-align:right}
+    .foot-hint code{color:var(--gold);font-size:.68rem;background:rgba(255,194,75,.08);padding:.1rem .35rem;border-radius:3px}
 
-    @media(max-width:640px){.hero-monogram{font-size:5rem}.sec-header{flex-direction:column}.topic-hint{text-align:left;max-width:none}footer{flex-direction:column;gap:1rem}}
+    @media(max-width:640px){.hero-monogram{font-size:5rem}.sec-header{flex-direction:column}.topic-hint{text-align:left;max-width:none}.foot-hint{text-align:left}footer{flex-direction:column}}
   </style>
 </head>
 <body>
@@ -180,11 +200,11 @@
         <span class="en-only"><em>Featured</em> projects</span>
       </h2>
       <p class="topic-hint">
-        <span class="fr-only">Mis à jour automatiquement depuis GitHub.<br/>Topic <code>portfolio</code> requis pour apparaître ici.</span>
-        <span class="en-only">Auto-updated from GitHub.<br/>Add the <code>portfolio</code> topic to feature a repo here.</span>
+        <span class="fr-only">Mis à jour depuis GitHub.<br/><code>portfolio</code> + <code>cat-*</code> + <code>status-*</code></span>
+        <span class="en-only">Auto-updated from GitHub.<br/><code>portfolio</code> + <code>cat-*</code> + <code>status-*</code></span>
       </p>
     </div>
-    <div id="projects-grid" class="projects-grid">
+    <div id="projects-container">
       <!-- Populated by JS -->
     </div>
   </div>
@@ -196,232 +216,357 @@
     <span class="fr-only">Projets open source · MIT License</span>
     <span class="en-only">Open source projects · MIT License</span>
   </div>
-  <a href="https://github.com/CCoupel" target="_blank" rel="noopener" class="foot-gh">github.com/CCoupel ↗</a>
+  <div class="foot-hint">
+    <span class="fr-only">Ajouter un projet : topic <code>portfolio</code> + <code>cat-*</code> sur le repo GitHub</span>
+    <span class="en-only">To feature a project: add <code>portfolio</code> + <code>cat-*</code> topic on GitHub</span>
+  </div>
 </footer>
 
 <script>
 (function(){
-  /* ── Canvas animated dots ── */
+
+  /* ── Canvas ── */
   var canvas = document.getElementById('hero-canvas');
   if(canvas){
-    var ctx = canvas.getContext('2d'), W, H, nodes = [], CONN_DIST = 130;
-    function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
-    function makeNode(){
-      return { x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35, r:1.5+Math.random()*1.5, alpha:0.15+Math.random()*0.25 };
-    }
-    function init(){ nodes=[]; var n=Math.min(55,Math.floor(W*H/12000)); for(var i=0;i<n;i++) nodes.push(makeNode()); }
+    var ctx=canvas.getContext('2d'),W,H,nodes=[],DIST=130;
+    function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
+    function mkNode(){ return {x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:1.5+Math.random()*1.5,a:0.15+Math.random()*0.25}; }
+    function init(){ nodes=[]; var n=Math.min(55,Math.floor(W*H/12000)); for(var i=0;i<n;i++) nodes.push(mkNode()); }
     function draw(){
       ctx.clearRect(0,0,W,H);
       nodes.forEach(function(n){ n.x+=n.vx; n.y+=n.vy; if(n.x<0||n.x>W) n.vx*=-1; if(n.y<0||n.y>H) n.vy*=-1; });
-      for(var i=0;i<nodes.length;i++){
-        for(var j=i+1;j<nodes.length;j++){
-          var dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y, d=Math.sqrt(dx*dx+dy*dy);
-          if(d<CONN_DIST){ ctx.save(); ctx.globalAlpha=(1-d/CONN_DIST)*0.08; ctx.strokeStyle='#ffc24b'; ctx.lineWidth=.8; ctx.beginPath(); ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y); ctx.stroke(); ctx.restore(); }
-        }
+      for(var i=0;i<nodes.length;i++) for(var j=i+1;j<nodes.length;j++){
+        var dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<DIST){ ctx.save();ctx.globalAlpha=(1-d/DIST)*0.08;ctx.strokeStyle='#ffc24b';ctx.lineWidth=.8;ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();ctx.restore(); }
       }
-      nodes.forEach(function(n){ ctx.save(); ctx.globalAlpha=n.alpha; ctx.fillStyle='#ffc24b'; ctx.beginPath(); ctx.arc(n.x,n.y,n.r,0,Math.PI*2); ctx.fill(); ctx.restore(); });
+      nodes.forEach(function(n){ ctx.save();ctx.globalAlpha=n.a;ctx.fillStyle='#ffc24b';ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();ctx.restore(); });
       requestAnimationFrame(draw);
     }
     window.addEventListener('resize',function(){ resize(); init(); });
     resize(); init(); draw();
   }
 
-  /* ── Language switcher ── */
-  var currentLang = localStorage.getItem('cc-lang') || 'fr';
-
-  function setLang(lang){
-    currentLang = lang;
-    document.documentElement.lang = lang;
-    document.documentElement.className = 'lang-' + lang;
-    document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-lang')===lang); });
-    localStorage.setItem('cc-lang', lang);
-    document.title = lang==='fr' ? 'Cyril Coupel \u2014 Projets open source' : 'Cyril Coupel \u2014 Open source projects';
+  /* ── Language ── */
+  var lang = localStorage.getItem('cc-lang') || 'fr';
+  function setLang(l){
+    lang=l;
+    document.documentElement.lang=l;
+    document.documentElement.className='lang-'+l;
+    document.querySelectorAll('.lang-btn').forEach(function(b){ b.classList.toggle('active',b.getAttribute('data-lang')===l); });
+    localStorage.setItem('cc-lang',l);
+    document.title = l==='fr' ? 'Cyril Coupel \u2014 Projets open source' : 'Cyril Coupel \u2014 Open source projects';
+    if(cachedRepos.length) renderAll(cachedRepos, cachedVersions);
   }
+  document.querySelectorAll('.lang-btn').forEach(function(b){ b.addEventListener('click',function(){ setLang(this.getAttribute('data-lang')); }); });
 
-  document.querySelectorAll('.lang-btn').forEach(function(btn){
-    btn.addEventListener('click', function(){ setLang(this.getAttribute('data-lang')); });
-  });
+  /* ── Data tables ── */
 
-  /* ── Language/color helpers ── */
   var LANG_COLORS = {
-    'C#':         { color:'#a855f7', bg:'rgba(168,85,247,.15)' },
-    'Python':     { color:'#3b82f6', bg:'rgba(59,130,246,.15)' },
-    'TypeScript': { color:'#60a5fa', bg:'rgba(96,165,250,.15)' },
-    'JavaScript': { color:'#fbbf24', bg:'rgba(251,191,36,.15)' },
-    'Shell':      { color:'#00e0cc', bg:'rgba(0,224,204,.15)' },
-    'HCL':        { color:'#7c3aed', bg:'rgba(124,58,237,.15)' },
-    'HTML':       { color:'#f97316', bg:'rgba(249,115,22,.15)' },
-    'default':    { color:'#6b7280', bg:'rgba(107,114,128,.12)' }
+    'C#':{'color':'#a855f7','bg':'rgba(168,85,247,.18)'},
+    'Python':{'color':'#3b82f6','bg':'rgba(59,130,246,.18)'},
+    'TypeScript':{'color':'#60a5fa','bg':'rgba(96,165,250,.18)'},
+    'JavaScript':{'color':'#fbbf24','bg':'rgba(251,191,36,.18)'},
+    'Shell':{'color':'#00e0cc','bg':'rgba(0,224,204,.18)'},
+    'HCL':{'color':'#7c3aed','bg':'rgba(124,58,237,.18)'},
+    'HTML':{'color':'#f97316','bg':'rgba(249,115,22,.18)'},
+    'default':{'color':'#6b7280','bg':'rgba(107,114,128,.12)'}
   };
-  function langColor(lang){ return LANG_COLORS[lang] || LANG_COLORS['default']; }
 
-  /* ── Fallback data if API fails ── */
-  var FALLBACK = [
-    { name:'Emby_VirtualLib', description:'Plugin Emby qui agrège les bibliothèques de serveurs distants (Emby, Jellyfin, Plex) comme bibliothèques virtuelles locales. Proxy transparent, zéro copie.', language:'C#', stargazers_count:0, html_url:'https://github.com/CCoupel/Emby_VirtualLib', has_pages:true, topics:['portfolio'] },
-    { name:'BuzzMaster',       description:'Outil de gestion et d\'automatisation marketing — campagnes, workflows, planification.',                                                                        language:'TypeScript', stargazers_count:0, html_url:'https://github.com/CCoupel/BuzzMaster',      has_pages:true, topics:['portfolio'] },
-    { name:'automation-factory', description:'Build Ansible playbooks graphically. A visual editor for infrastructure-as-code automation.',                                                                language:'TypeScript', stargazers_count:0, html_url:'https://github.com/CCoupel/automation-factory', has_pages:true, topics:['portfolio'] },
-    { name:'Ansible-SecAgent',   description:'Add security to Ansible with agents — automated security hardening and compliance for your infrastructure.',                                                language:'Python', stargazers_count:0, html_url:'https://github.com/CCoupel/Ansible-SecAgent',   has_pages:true, topics:['portfolio'] }
+  var STATUS = {
+    'status-wip':    {labelFr:'En cours',labelEn:'WIP',    color:'#f97316',bg:'rgba(249,115,22,.1)', pct:20},
+    'status-alpha':  {labelFr:'Alpha',   labelEn:'Alpha',  color:'#fbbf24',bg:'rgba(251,191,36,.1)', pct:40},
+    'status-beta':   {labelFr:'Beta',    labelEn:'Beta',   color:'#60a5fa',bg:'rgba(96,165,250,.1)', pct:65},
+    'status-stable': {labelFr:'Stable',  labelEn:'Stable', color:'#34d399',bg:'rgba(52,211,153,.1)', pct:100}
+  };
+
+  /* Category definitions — order = display order */
+  var CATEGORIES = [
+    {key:'cat-automation', icon:'🤖', labelFr:'Automatisation',    labelEn:'Automation',     color:'#4f8aff', bg:'rgba(79,138,255,.12)'},
+    {key:'cat-media',      icon:'🎬', labelFr:'Média & Home Lab',   labelEn:'Media & Home Lab',color:'#00e0cc', bg:'rgba(0,224,204,.12)'},
+    {key:'cat-security',   icon:'🔒', labelFr:'Sécurité',           labelEn:'Security',       color:'#ff6b6b', bg:'rgba(255,107,107,.12)'},
+    {key:'cat-game',       icon:'🎮', labelFr:'Jeux & Ludique',     labelEn:'Fun & Games',    color:'#ffc24b', bg:'rgba(255,194,75,.12)'},
+    {key:'cat-devtools',   icon:'🛠️', labelFr:'Outils Dev',         labelEn:'Dev Tools',      color:'#a855f7', bg:'rgba(168,85,247,.12)'},
+    {key:'cat-homelab',    icon:'🏠', labelFr:'Home Lab',           labelEn:'Home Lab',       color:'#34d399', bg:'rgba(52,211,153,.12)'},
+    {key:'other',          icon:'📦', labelFr:'Autres',             labelEn:'Others',         color:'#6b7280', bg:'rgba(107,114,128,.12)'}
   ];
 
-  /* ── Render helpers ── */
-  function el(tag, cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
+  /* Fallback data */
+  var FALLBACK = [
+    {name:'Emby_VirtualLib',   description:'Plugin Emby qui agrège les bibliothèques de serveurs distants (Emby, Jellyfin, Plex) comme bibliothèques virtuelles locales. Proxy transparent, zéro copie.',language:'C#',         stargazers_count:0,html_url:'https://github.com/CCoupel/Emby_VirtualLib',   has_pages:true,topics:['portfolio','cat-media','status-wip'],   pushed_at:'2025-03-01T00:00:00Z'},
+    {name:'BuzzMaster',         description:'Outil de gestion et d\'automatisation marketing — campagnes, workflows, planification et suivi.',                                                             language:'TypeScript',  stargazers_count:0,html_url:'https://github.com/CCoupel/BuzzMaster',       has_pages:true,topics:['portfolio','cat-automation','status-wip'],pushed_at:'2025-02-15T00:00:00Z'},
+    {name:'automation-factory', description:'Build Ansible playbooks graphically. A visual editor for infrastructure-as-code automation workflows.',                                                        language:'TypeScript',  stargazers_count:0,html_url:'https://github.com/CCoupel/automation-factory', has_pages:true,topics:['portfolio','cat-automation','status-wip'],pushed_at:'2025-03-10T00:00:00Z'},
+    {name:'Ansible-SecAgent',   description:'Add security to Ansible with agents — automated security hardening and compliance for infrastructure.',                                                        language:'Python',      stargazers_count:0,html_url:'https://github.com/CCoupel/Ansible-SecAgent',   has_pages:true,topics:['portfolio','cat-security','status-wip'],  pushed_at:'2025-01-20T00:00:00Z'}
+  ];
 
-  function renderProjects(repos){
-    var grid = document.getElementById('projects-grid');
-    if(!grid) return;
-    while(grid.firstChild) grid.removeChild(grid.firstChild);
+  /* ── State ── */
+  var cachedRepos    = [];
+  var cachedVersions = {};
 
-    if(!repos || repos.length===0){
-      var empty = el('div','empty-state');
-      empty.textContent = currentLang==='fr' ? 'Aucun projet mis en avant pour l\'instant.' : 'No featured projects yet.';
-      grid.appendChild(empty);
-      return;
+  /* ── Helpers ── */
+  function el(tag,cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
+
+  function langColor(l){ return LANG_COLORS[l]||LANG_COLORS['default']; }
+
+  function getStatus(topics){
+    var keys = Object.keys(STATUS);
+    for(var i=0;i<keys.length;i++) if(topics.indexOf(keys[i])!==-1) return STATUS[keys[i]];
+    return null;
+  }
+
+  function getCatKey(topics){
+    for(var i=0;i<CATEGORIES.length-1;i++) if(topics.indexOf(CATEGORIES[i].key)!==-1) return CATEGORIES[i].key;
+    return 'other';
+  }
+
+  function relativeTime(iso){
+    var d = new Date(iso), now = Date.now(), diff = Math.floor((now - d)/1000);
+    if(diff < 3600)  return lang==='fr' ? 'il y a ' + Math.floor(diff/60) + ' min' : Math.floor(diff/60) + ' min ago';
+    if(diff < 86400) return lang==='fr' ? 'il y a ' + Math.floor(diff/3600) + 'h'  : Math.floor(diff/3600) + 'h ago';
+    var days = Math.floor(diff/86400);
+    if(days < 30)    return lang==='fr' ? 'il y a ' + days + ' j' : days + 'd ago';
+    var months = Math.floor(days/30);
+    if(months < 12)  return lang==='fr' ? 'il y a ' + months + ' mois' : months + 'mo ago';
+    return lang==='fr' ? 'il y a ' + Math.floor(months/12) + ' an' : Math.floor(months/12) + 'y ago';
+  }
+
+  /* ── Build one card ── */
+  function buildCard(repo, idx){
+    var topics  = repo.topics || [];
+    var lc      = langColor(repo.language);
+    var status  = getStatus(topics);
+    var pagesUrl = 'https://ccoupel.github.io/' + repo.name + '/';
+
+    var card = el('div','proj-card');
+    card.style.opacity='0'; card.style.transform='translateY(18px)';
+    card.style.transition='opacity .4s ease, transform .4s ease, border-color .2s, box-shadow .2s';
+    card.style.transitionDelay=(idx*75)+'ms';
+
+    /* color bar */
+    var bar = el('div','proj-card-bar');
+    bar.style.background='linear-gradient(90deg,'+lc.color+' 0%,transparent 100%)';
+    card.appendChild(bar);
+
+    /* body */
+    var body = el('div','proj-card-body');
+
+    /* top row: name + status badge */
+    var topRow = el('div','proj-card-top');
+    var nameEl = el('div','proj-name'); nameEl.textContent=repo.name; topRow.appendChild(nameEl);
+    if(status){
+      var badge = el('span','status-badge');
+      badge.style.color=status.color;
+      badge.style.background=status.bg;
+      badge.style.borderColor=status.color.replace(')',', .25)').replace('rgb','rgba');
+      badge.textContent = lang==='fr' ? status.labelFr : status.labelEn;
+      topRow.appendChild(badge);
+    }
+    body.appendChild(topRow);
+
+    /* meta: version + last updated */
+    var meta = el('div','proj-meta');
+    var versionEl = el('span','proj-version ver-loading');
+    versionEl.id = 'ver-' + repo.name;
+    versionEl.textContent = '···';
+    meta.appendChild(versionEl);
+    if(repo.pushed_at){
+      var updEl = el('span','proj-updated');
+      updEl.textContent = relativeTime(repo.pushed_at);
+      meta.appendChild(updEl);
+    }
+    body.appendChild(meta);
+
+    /* description */
+    var desc = el('p','proj-desc'); desc.textContent=repo.description||(lang==='fr'?'Pas de description disponible.':'No description available.'); body.appendChild(desc);
+
+    /* progress bar */
+    if(status){
+      var pwrap = el('div','proj-progress-wrap');
+      var plabel = el('div','proj-progress-label');
+      var pstage = el('span','proj-progress-stage');
+      pstage.textContent = lang==='fr' ? status.labelFr : status.labelEn;
+      var ppct = el('span','proj-progress-pct');
+      ppct.textContent = status.pct+'%';
+      plabel.appendChild(pstage); plabel.appendChild(ppct);
+      pwrap.appendChild(plabel);
+      var ptrack = el('div','proj-progress-track');
+      var pfill = el('div','proj-progress-fill');
+      pfill.style.background = 'linear-gradient(90deg,'+lc.color+','+status.color+')';
+      pfill.style.width = '0%';
+      pfill.style.boxShadow = '0 0 8px '+status.color+'66';
+      ptrack.appendChild(pfill);
+      pwrap.appendChild(ptrack);
+      body.appendChild(pwrap);
+      /* animate bar after a tick */
+      setTimeout(function(){ pfill.style.width = status.pct+'%'; }, 200 + idx*75);
     }
 
+    /* topics (hide portfolio + cat-* + status-* — only show "other" topics) */
+    var visibleTopics = topics.filter(function(t){ return t!=='portfolio' && t.indexOf('cat-')!==0 && t.indexOf('status-')!==0; });
+    if(visibleTopics.length>0){
+      var topicsRow = el('div','proj-topics');
+      visibleTopics.forEach(function(t){
+        var pill = el('span','proj-topic'); pill.textContent=t; topicsRow.appendChild(pill);
+      });
+      body.appendChild(topicsRow);
+    }
+
+    /* language */
+    if(repo.language){
+      var langRow = el('div','proj-lang'); langRow.style.cssText='display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:800;color:'+lc.color;
+      var dot = el('span'); dot.style.cssText='width:8px;height:8px;border-radius:50%;background:'+lc.color+';box-shadow:0 0 5px '+lc.color+';flex-shrink:0';
+      langRow.appendChild(dot); langRow.appendChild(document.createTextNode(repo.language)); body.appendChild(langRow);
+    }
+
+    card.appendChild(body);
+
+    /* footer */
+    var footer = el('div','proj-card-footer');
+    var btnGh = el('a','proj-btn proj-btn-gh');
+    btnGh.href=repo.html_url; btnGh.target='_blank'; btnGh.rel='noopener';
+    var ghSvg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    ghSvg.setAttribute('width','14');ghSvg.setAttribute('height','14');ghSvg.setAttribute('viewBox','0 0 24 24');ghSvg.setAttribute('fill','currentColor');
+    var ghP = document.createElementNS('http://www.w3.org/2000/svg','path');
+    ghP.setAttribute('d','M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z');
+    ghSvg.appendChild(ghP); btnGh.appendChild(ghSvg); btnGh.appendChild(document.createTextNode(' GitHub'));
+    footer.appendChild(btnGh);
+
+    if(repo.has_pages){
+      var btnSite = el('a','proj-btn proj-btn-site');
+      btnSite.href=pagesUrl; btnSite.target='_blank'; btnSite.rel='noopener';
+      var extSvg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+      extSvg.setAttribute('width','12');extSvg.setAttribute('height','12');extSvg.setAttribute('viewBox','0 0 24 24');extSvg.setAttribute('fill','none');extSvg.setAttribute('stroke','currentColor');extSvg.setAttribute('stroke-width','2.5');
+      var extP = document.createElementNS('http://www.w3.org/2000/svg','path');
+      extP.setAttribute('d','M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3');
+      extSvg.appendChild(extP); btnSite.appendChild(extSvg); btnSite.appendChild(document.createTextNode(' Site'));
+      footer.appendChild(btnSite);
+    }
+    card.appendChild(footer);
+
+    return card;
+  }
+
+  /* ── Render all (grouped by category) ── */
+  function renderAll(repos, versions){
+    var container = document.getElementById('projects-container');
+    if(!container) return;
+    while(container.firstChild) container.removeChild(container.firstChild);
+
     /* update counter */
-    var c = document.getElementById('proj-count');
-    var cen = document.getElementById('proj-count-en');
-    if(c) c.textContent = repos.length;
-    if(cen) cen.textContent = repos.length;
+    var c=document.getElementById('proj-count'), ce=document.getElementById('proj-count-en');
+    if(c) c.textContent=repos.length; if(ce) ce.textContent=repos.length;
 
-    repos.forEach(function(repo, idx){
-      var lc = langColor(repo.language);
-      var card = el('div','proj-card');
-      card.style.borderColor = 'rgba(255,255,255,.07)';
+    /* group */
+    var groups = {};
+    CATEGORIES.forEach(function(cat){ groups[cat.key]=[]; });
+    repos.forEach(function(r){ var k=getCatKey(r.topics||[]); groups[k].push(r); });
 
-      /* top color bar */
-      var bar = el('div','proj-card-bar');
-      bar.style.background = 'linear-gradient(90deg,' + lc.color + ', transparent)';
-      card.appendChild(bar);
+    /* fill version from cache */
+    repos.forEach(function(r){
+      if(versions[r.name] !== undefined) r._version = versions[r.name];
+    });
 
-      /* body */
-      var body = el('div','proj-card-body');
+    var globalIdx = 0;
+    CATEGORIES.forEach(function(cat){
+      var list = groups[cat.key];
+      if(!list || list.length===0) return;
 
-      /* top row */
-      var topRow = el('div','proj-card-top');
-      var nameEl = el('div','proj-name');
-      nameEl.textContent = repo.name;
-      topRow.appendChild(nameEl);
-      if(repo.stargazers_count > 0){
-        var stars = el('div','proj-stars');
-        var starSvg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-        starSvg.setAttribute('width','12'); starSvg.setAttribute('height','12');
-        starSvg.setAttribute('viewBox','0 0 24 24'); starSvg.setAttribute('fill','currentColor');
-        var path = document.createElementNS('http://www.w3.org/2000/svg','path');
-        path.setAttribute('d','M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z');
-        starSvg.appendChild(path);
-        stars.appendChild(starSvg);
-        var starCount = document.createTextNode(' ' + repo.stargazers_count);
-        stars.appendChild(starCount);
-        topRow.appendChild(stars);
-      }
-      body.appendChild(topRow);
+      var section = el('div','cat-section');
 
-      /* description */
-      var desc = el('p','proj-desc');
-      desc.textContent = repo.description || (currentLang==='fr' ? 'Pas de description disponible.' : 'No description available.');
-      body.appendChild(desc);
+      /* header */
+      var header = el('div','cat-header');
+      var iconWrap = el('div','cat-icon-wrap');
+      iconWrap.style.background=cat.bg; iconWrap.style.boxShadow='0 0 14px '+cat.color+'40';
+      iconWrap.textContent=cat.icon;
+      header.appendChild(iconWrap);
+      var nameEl = el('span','cat-name'); nameEl.style.color=cat.color;
+      nameEl.textContent = lang==='fr' ? cat.labelFr : cat.labelEn;
+      header.appendChild(nameEl);
+      var countEl = el('span','cat-count');
+      countEl.textContent = list.length + (lang==='fr' ? (list.length>1?' projets':' projet') : (list.length>1?' projects':' project'));
+      header.appendChild(countEl);
+      section.appendChild(header);
 
-      /* language */
-      if(repo.language){
-        var langRow = el('div','proj-lang');
-        langRow.style.color = lc.color;
-        var dot = el('span','proj-lang-dot');
-        dot.style.background = lc.color;
-        dot.style.boxShadow = '0 0 6px ' + lc.color;
-        langRow.appendChild(dot);
-        langRow.appendChild(document.createTextNode(repo.language));
-        body.appendChild(langRow);
-      }
+      /* grid */
+      var grid = el('div','cat-grid');
+      list.forEach(function(repo){
+        var card = buildCard(repo, globalIdx++);
+        grid.appendChild(card);
+        /* apply version if already cached */
+        if(repo._version !== undefined) fillVersion(repo.name, repo._version);
+      });
+      section.appendChild(grid);
+      container.appendChild(section);
+    });
 
-      /* topics */
-      if(repo.topics && repo.topics.length > 0){
-        var topicsRow = el('div','proj-topics');
-        repo.topics.forEach(function(t){
-          var pill = el('span','proj-topic' + (t==='portfolio' ? ' tp-portfolio' : ''));
-          pill.textContent = t;
-          topicsRow.appendChild(pill);
+    /* trigger card reveal */
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){
+      container.querySelectorAll('.proj-card').forEach(function(c){
+        c.style.opacity='1'; c.style.transform='none';
+      });
+    }); });
+  }
+
+  /* ── Fill version element ── */
+  function fillVersion(repoName, tag){
+    var el2 = document.getElementById('ver-'+repoName);
+    if(!el2) return;
+    el2.classList.remove('ver-loading');
+    if(tag){
+      el2.textContent = tag;
+    } else {
+      el2.style.color='var(--muted)';
+      el2.style.borderColor='transparent';
+      el2.style.background='rgba(255,255,255,.04)';
+      el2.textContent = 'pre-release';
+    }
+  }
+
+  /* ── Fetch releases (non-blocking, fills in after render) ── */
+  function fetchVersions(repos){
+    repos.forEach(function(repo){
+      fetch('https://api.github.com/repos/CCoupel/'+repo.name+'/releases/latest')
+        .then(function(r){
+          if(!r.ok) throw new Error('no release');
+          return r.json();
+        })
+        .then(function(d){
+          cachedVersions[repo.name] = d.tag_name || null;
+          fillVersion(repo.name, d.tag_name || null);
+        })
+        .catch(function(){
+          cachedVersions[repo.name] = null;
+          fillVersion(repo.name, null);
         });
-        body.appendChild(topicsRow);
-      }
-
-      card.appendChild(body);
-
-      /* footer buttons */
-      var footer = el('div','proj-card-footer');
-
-      var btnGh = el('a','proj-btn proj-btn-gh');
-      btnGh.href = repo.html_url;
-      btnGh.target = '_blank';
-      btnGh.rel = 'noopener';
-      var ghIcon = document.createElementNS('http://www.w3.org/2000/svg','svg');
-      ghIcon.setAttribute('width','14'); ghIcon.setAttribute('height','14');
-      ghIcon.setAttribute('viewBox','0 0 24 24'); ghIcon.setAttribute('fill','currentColor');
-      var ghPath = document.createElementNS('http://www.w3.org/2000/svg','path');
-      ghPath.setAttribute('d','M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.026 2.747-1.026.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z');
-      ghIcon.appendChild(ghPath);
-      btnGh.appendChild(ghIcon);
-      btnGh.appendChild(document.createTextNode(' GitHub'));
-      footer.appendChild(btnGh);
-
-      if(repo.has_pages){
-        var btnDemo = el('a','proj-btn proj-btn-demo');
-        var pagesUrl = 'https://ccoupel.github.io/' + repo.name + '/';
-        btnDemo.href = pagesUrl;
-        btnDemo.target = '_blank';
-        btnDemo.rel = 'noopener';
-        var demoIcon = document.createElementNS('http://www.w3.org/2000/svg','svg');
-        demoIcon.setAttribute('width','13'); demoIcon.setAttribute('height','13');
-        demoIcon.setAttribute('viewBox','0 0 24 24'); demoIcon.setAttribute('fill','none');
-        demoIcon.setAttribute('stroke','currentColor'); demoIcon.setAttribute('stroke-width','2.5');
-        var demoPath = document.createElementNS('http://www.w3.org/2000/svg','path');
-        demoPath.setAttribute('d','M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3');
-        demoIcon.appendChild(demoPath);
-        btnDemo.appendChild(demoIcon);
-        btnDemo.appendChild(document.createTextNode(' Demo'));
-        footer.appendChild(btnDemo);
-      }
-
-      card.appendChild(footer);
-
-      /* stagger in */
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity .45s ease, transform .45s ease, border-color .2s, box-shadow .2s';
-      card.style.transitionDelay = (idx * 90) + 'ms';
-      grid.appendChild(card);
-      requestAnimationFrame(function(){ requestAnimationFrame(function(){
-        card.style.opacity = '1';
-        card.style.transform = 'none';
-      }); });
     });
   }
 
-  /* ── Fetch from GitHub API ── */
+  /* ── Load repos ── */
   function loadProjects(){
-    var grid = document.getElementById('projects-grid');
-    if(grid){
+    var container = document.getElementById('projects-container');
+    if(container){
       var loading = el('div','load-state');
-      loading.textContent = currentLang==='fr' ? 'Chargement des projets...' : 'Loading projects...';
-      grid.appendChild(loading);
+      loading.textContent = lang==='fr' ? 'Chargement des projets...' : 'Loading projects...';
+      container.appendChild(loading);
     }
     fetch('https://api.github.com/search/repositories?q=user:CCoupel+topic:portfolio&sort=updated&per_page=20')
-      .then(function(r){
-        if(!r.ok) throw new Error('API error ' + r.status);
-        return r.json();
-      })
+      .then(function(r){ if(!r.ok) throw new Error('API '+r.status); return r.json(); })
       .then(function(data){
-        var items = (data.items || []).filter(function(r){ return !r.archived; });
-        renderProjects(items.length > 0 ? items : FALLBACK);
+        var items = (data.items||[]).filter(function(r){ return !r.archived; });
+        cachedRepos = items.length>0 ? items : FALLBACK;
+        renderAll(cachedRepos, cachedVersions);
+        fetchVersions(cachedRepos);
       })
       .catch(function(){
-        renderProjects(FALLBACK);
+        cachedRepos = FALLBACK;
+        renderAll(cachedRepos, cachedVersions);
+        fetchVersions(cachedRepos);
       });
   }
 
   /* ── Init ── */
-  setLang(currentLang);
+  setLang(lang);
   loadProjects();
+
 })();
 </script>
 </body>
