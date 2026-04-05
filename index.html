@@ -110,13 +110,14 @@
     /* Description */
     .proj-desc{font-size:.85rem;color:var(--muted);line-height:1.75;flex:1}
 
-    /* Progress bar */
-    .proj-progress-wrap{display:flex;flex-direction:column;gap:.35rem}
-    .proj-progress-label{display:flex;justify-content:space-between;align-items:center}
-    .proj-progress-stage{font-size:.68rem;font-weight:800;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
-    .proj-progress-pct{font-size:.68rem;font-weight:700;color:var(--muted)}
-    .proj-progress-track{height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
-    .proj-progress-fill{height:100%;border-radius:2px;transition:width .8s cubic-bezier(.4,0,.2,1)}
+    /* Issue counters */
+    .proj-issues{display:flex;gap:.35rem;flex-wrap:wrap;align-items:center;min-height:22px}
+    .proj-issues-loading{font-size:.68rem;color:var(--muted);animation:pulse-ver 1.5s ease infinite}
+    .proj-issue-pill{font-size:.68rem;font-weight:800;padding:.2rem .55rem;border-radius:20px;border:1px solid}
+    .proj-issue-bug{color:#ff6b6b;background:rgba(255,107,107,.08);border-color:rgba(255,107,107,.2)}
+    .proj-issue-feat{color:#a855f7;background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.2)}
+    .proj-issue-total{color:var(--muted);background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+    .proj-issue-none{font-size:.68rem;font-weight:700;color:#34d399}
 
     /* Topics */
     .proj-topics{display:flex;gap:.35rem;flex-wrap:wrap}
@@ -378,27 +379,12 @@
     /* description */
     var desc = el('p','proj-desc'); desc.textContent=repo.description||(lang==='fr'?'Pas de description disponible.':'No description available.'); body.appendChild(desc);
 
-    /* progress bar */
-    if(status){
-      var pwrap = el('div','proj-progress-wrap');
-      var plabel = el('div','proj-progress-label');
-      var pstage = el('span','proj-progress-stage');
-      pstage.textContent = lang==='fr' ? status.labelFr : status.labelEn;
-      var ppct = el('span','proj-progress-pct');
-      ppct.textContent = status.pct+'%';
-      plabel.appendChild(pstage); plabel.appendChild(ppct);
-      pwrap.appendChild(plabel);
-      var ptrack = el('div','proj-progress-track');
-      var pfill = el('div','proj-progress-fill');
-      pfill.style.background = 'linear-gradient(90deg,'+lc.color+','+status.color+')';
-      pfill.style.width = '0%';
-      pfill.style.boxShadow = '0 0 8px '+status.color+'66';
-      ptrack.appendChild(pfill);
-      pwrap.appendChild(ptrack);
-      body.appendChild(pwrap);
-      /* animate bar after a tick */
-      setTimeout(function(){ pfill.style.width = status.pct+'%'; }, 200 + idx*75);
-    }
+    /* issue counters */
+    var issuesRow = el('div','proj-issues');
+    issuesRow.id = 'issues-'+repo.name;
+    var iload = el('span','proj-issues-loading'); iload.textContent='···';
+    issuesRow.appendChild(iload);
+    body.appendChild(issuesRow);
 
     /* topics (hide portfolio + cat-* + status-* — only show "other" topics) */
     var visibleTopics = topics.filter(function(t){ return t!=='portfolio' && t.indexOf('cat-')!==0 && t.indexOf('status-')!==0; });
@@ -521,6 +507,51 @@
     }
   }
 
+  /* ── Fill issue counters ── */
+  function fillIssues(repoName, bugs, enhancements, total){
+    var el2 = document.getElementById('issues-'+repoName);
+    if(!el2) return;
+    while(el2.firstChild) el2.removeChild(el2.firstChild);
+    if(total===0){
+      var none = el('span','proj-issue-none');
+      none.textContent = lang==='fr' ? '✅ Aucune issue ouverte' : '✅ No open issues';
+      el2.appendChild(none);
+      return;
+    }
+    if(bugs>0){
+      var bugEl = el('span','proj-issue-pill proj-issue-bug');
+      bugEl.textContent='🐛 '+bugs;
+      el2.appendChild(bugEl);
+    }
+    if(enhancements>0){
+      var featEl = el('span','proj-issue-pill proj-issue-feat');
+      featEl.textContent='✨ '+enhancements;
+      el2.appendChild(featEl);
+    }
+    var totEl = el('span','proj-issue-pill proj-issue-total');
+    totEl.textContent='📋 '+total+(lang==='fr'?' ouvertes':' open');
+    el2.appendChild(totEl);
+  }
+
+  /* ── Fetch issues (non-blocking, fills in after render) ── */
+  function fetchIssues(repos){
+    repos.forEach(function(repo){
+      fetch('https://api.github.com/repos/CCoupel/'+repo.name+'/issues?state=open&per_page=100')
+        .then(function(r){ if(!r.ok) throw new Error('no issues'); return r.json(); })
+        .then(function(data){
+          /* exclude pull requests — GitHub mixes them in /issues */
+          var issues = data.filter(function(i){ return !i.pull_request; });
+          var bugs = issues.filter(function(i){ return i.labels.some(function(l){ return l.name==='bug'; }); }).length;
+          var enhancements = issues.filter(function(i){ return i.labels.some(function(l){ return l.name==='enhancement'||l.name==='feature'; }); }).length;
+          fillIssues(repo.name, bugs, enhancements, issues.length);
+        })
+        .catch(function(){
+          var el2 = document.getElementById('issues-'+repo.name);
+          if(el2) while(el2.firstChild) el2.removeChild(el2.firstChild);
+        });
+    });
+  }
+
   /* ── Fetch releases (non-blocking, fills in after render) ── */
   function fetchVersions(repos){
     repos.forEach(function(repo){
@@ -555,11 +586,13 @@
         cachedRepos = items.length>0 ? items : FALLBACK;
         renderAll(cachedRepos, cachedVersions);
         fetchVersions(cachedRepos);
+        fetchIssues(cachedRepos);
       })
       .catch(function(){
         cachedRepos = FALLBACK;
         renderAll(cachedRepos, cachedVersions);
         fetchVersions(cachedRepos);
+        fetchIssues(cachedRepos);
       });
   }
 
