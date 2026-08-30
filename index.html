@@ -50,6 +50,21 @@
     .nav-gh{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border:1px solid var(--border);border-radius:6px;font-size:.8rem;font-weight:700;color:var(--muted);transition:all .2s}
     .nav-gh:hover{border-color:var(--gold);color:var(--gold)}
 
+    /* CAT SELECTOR (nav) */
+    .cat-selector{position:relative}
+    .cat-selector-btn{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:6px;padding:.35rem .75rem;font-family:var(--fb);font-size:.78rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s}
+    .cat-selector-btn:hover{border-color:var(--gold);color:var(--gold)}
+    .cat-selector-btn .csb-caret{font-size:.65rem;color:var(--muted);transition:transform .2s}
+    .cat-selector.open .csb-caret{transform:rotate(180deg)}
+    .cat-selector-menu{position:absolute;top:calc(100% + .6rem);left:0;min-width:220px;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:.4rem;box-shadow:0 12px 32px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s,visibility .15s}
+    .cat-selector.open .cat-selector-menu{opacity:1;visibility:visible;transform:translateY(0)}
+    .cat-selector-item{display:flex;align-items:center;gap:.6rem;padding:.5rem .6rem;border-radius:6px;font-size:.82rem;font-weight:700;color:var(--text);transition:background .12s}
+    .cat-selector-item:hover{background:rgba(255,255,255,.06)}
+    .cat-selector-item .csi-icon{font-size:1rem;flex-shrink:0}
+    .cat-selector-item .csi-label{flex:1}
+    .cat-selector-item .csi-count{font-size:.68rem;color:var(--muted);font-weight:800}
+    @media (max-width:640px){ .cat-selector-btn .csb-text{display:none} }
+
     /* HERO */
     .hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;padding:7rem clamp(1.5rem,5vw,4rem) 4rem;overflow:hidden;text-align:center}
     #hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
@@ -81,7 +96,7 @@
     .topic-hint code{color:var(--gold);background:rgba(255,194,75,.08);padding:.1rem .4rem;border-radius:3px;font-size:.7rem}
 
     /* CATEGORY SECTION */
-    .cat-section{margin-bottom:4rem}
+    .cat-section{margin-bottom:4rem;scroll-margin-top:84px}
     .cat-section:last-child{margin-bottom:0}
     .cat-header{display:flex;align-items:center;gap:.85rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
     .cat-icon-wrap{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
@@ -155,6 +170,17 @@
 <nav class="nav">
   <div class="nav-brand">Cyril <em>Coupel</em></div>
   <div class="nav-right">
+    <div class="cat-selector" id="cat-selector">
+      <button class="cat-selector-btn" id="cat-selector-btn" aria-haspopup="true" aria-expanded="false">
+        <span aria-hidden="true">🗂️</span>
+        <span class="csb-text fr-only">Catégories</span>
+        <span class="csb-text en-only">Categories</span>
+        <span class="csb-caret">▾</span>
+      </button>
+      <div class="cat-selector-menu" id="cat-selector-menu" role="menu">
+        <!-- Populated by JS -->
+      </div>
+    </div>
     <div class="lang-switcher" aria-label="Langue / Language">
       <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
       <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
@@ -288,6 +314,7 @@
     {key:'cat-game',       icon:'🎮', labelFr:'Jeux & Ludique',     labelEn:'Fun & Games',    color:'#ffc24b', bg:'rgba(255,194,75,.12)'},
     {key:'cat-devtools',   icon:'🛠️', labelFr:'Outils Dev',         labelEn:'Dev Tools',      color:'#a855f7', bg:'rgba(168,85,247,.12)'},
     {key:'cat-homelab',    icon:'🏠', labelFr:'Home Lab',           labelEn:'Home Lab',       color:'#34d399', bg:'rgba(52,211,153,.12)'},
+    {key:'cat-ai-agents',  icon:'🧠', labelFr:'Agents IA',          labelEn:'AI Agents',      color:'#f97316', bg:'rgba(249,115,22,.12)'},
     {key:'other',          icon:'📦', labelFr:'Autres',             labelEn:'Others',         color:'#6b7280', bg:'rgba(107,114,128,.12)'}
   ];
 
@@ -314,10 +341,74 @@
     return null;
   }
 
-  function getCatKey(topics){
-    for(var i=0;i<CATEGORIES.length-1;i++) if(topics.indexOf(CATEGORIES[i].key)!==-1) return CATEGORIES[i].key;
-    return 'other';
+  /* Renvoie le topic cat-* brut d'un repo (premier trouvé), ou null si aucun */
+  function getCatTopic(topics){
+    for(var i=0;i<topics.length;i++) if(topics[i].indexOf('cat-')===0) return topics[i];
+    return null;
   }
+
+  /* Palette de secours pour une categorie cat-* non presente dans CATEGORIES —
+     cycle sur ces couleurs, dans l'ordre de decouverte, pour rester distinct
+     visuellement sans avoir besoin d'etre maintenu a la main. */
+  var AUTO_PALETTE = [
+    {color:'#a855f7',bg:'rgba(168,85,247,.12)'},
+    {color:'#00e0cc',bg:'rgba(0,224,204,.12)'},
+    {color:'#f97316',bg:'rgba(249,115,22,.12)'},
+    {color:'#34d399',bg:'rgba(52,211,153,.12)'},
+    {color:'#4f8aff',bg:'rgba(79,138,255,.12)'},
+    {color:'#ff6b6b',bg:'rgba(255,107,107,.12)'}
+  ];
+
+  /* cat-ai-agents -> "AI Agents", cat-gaming -> "Gaming" */
+  function humanizeCat(key){
+    var ACRONYMS = {ai:'AI',ci:'CI',cd:'CD',api:'API',ui:'UI',iot:'IoT'};
+    return key.replace(/^cat-/,'').split('-').map(function(w){
+      return ACRONYMS[w.toLowerCase()] || (w.charAt(0).toUpperCase()+w.slice(1).toLowerCase());
+    }).join(' ');
+  }
+
+  /* Construit la liste des categories REELLEMENT presentes dans `repos`, dans cet ordre :
+     1. categories curatees (CATEGORIES, ordre defini) — seulement si au moins un repo l'utilise
+     2. categories cat-* decouvertes mais absentes de CATEGORIES — auto-labellisees, triees alpha
+     3. 'other' (aucun topic cat-*) — seulement si au moins un repo est concerne
+     Systematique : un repo n'est JAMAIS silencieusement absorbe par "Autres" tant qu'il porte un
+     topic cat-*, meme si ce topic n'a pas ete ajoute a la liste curatee. */
+  function buildCategoryList(repos){
+    var curatedByKey = {};
+    CATEGORIES.forEach(function(c){ if(c.key!=='other') curatedByKey[c.key]=c; });
+
+    var present = {};   // key -> true
+    var unknown = [];   // cles cat-* non curatees, ordre de decouverte
+    var hasOther = false;
+
+    repos.forEach(function(r){
+      var topic = getCatTopic(r.topics||[]);
+      if(!topic){ hasOther = true; return; }
+      if(!present[topic]){
+        present[topic] = true;
+        if(!curatedByKey[topic] && unknown.indexOf(topic)===-1) unknown.push(topic);
+      }
+    });
+
+    unknown.sort();
+
+    var list = [];
+    CATEGORIES.forEach(function(c){
+      if(c.key!=='other' && present[c.key]) list.push(c);
+    });
+    unknown.forEach(function(key,i){
+      var pal = AUTO_PALETTE[i % AUTO_PALETTE.length];
+      var label = humanizeCat(key);
+      list.push({key:key, icon:'🏷️', labelFr:label, labelEn:label, color:pal.color, bg:pal.bg});
+    });
+    if(hasOther){
+      var otherCat = CATEGORIES[CATEGORIES.length-1];
+      list.push(otherCat);
+    }
+    return list;
+  }
+
+  function catSectionId(key){ return 'cat-sec-' + key.replace(/^cat-/,''); }
 
   function relativeTime(iso){
     var d = new Date(iso), now = Date.now(), diff = Math.floor((now - d)/1000);
@@ -431,6 +522,50 @@
     return card;
   }
 
+  /* ── Category selector (nav dropdown) ── */
+  function renderCatSelector(activeCats, groups){
+    var menu = document.getElementById('cat-selector-menu');
+    var wrap = document.getElementById('cat-selector');
+    if(!menu || !wrap) return;
+    while(menu.firstChild) menu.removeChild(menu.firstChild);
+    activeCats.forEach(function(cat){
+      var count = (groups[cat.key]||[]).length;
+      if(count===0) return;
+      var item = el('a','cat-selector-item');
+      item.href = '#' + catSectionId(cat.key);
+      item.setAttribute('role','menuitem');
+      item.addEventListener('click', function(){ wrap.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+      var icon = el('span','csi-icon'); icon.textContent = cat.icon; item.appendChild(icon);
+      var label = el('span','csi-label'); label.textContent = lang==='fr' ? cat.labelFr : cat.labelEn; item.appendChild(label);
+      var cnt = el('span','csi-count'); cnt.textContent = count; item.appendChild(cnt);
+      menu.appendChild(item);
+    });
+    /* si une seule categorie (ou aucune), le selecteur n'a pas d'utilite */
+    wrap.style.display = menu.children.length>1 ? '' : 'none';
+  }
+
+  var btn = document.getElementById('cat-selector-btn');
+  if(btn){
+    var selWrap = document.getElementById('cat-selector');
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = selWrap.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function(e){
+      if(selWrap.classList.contains('open') && !selWrap.contains(e.target)){
+        selWrap.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key==='Escape' && selWrap.classList.contains('open')){
+        selWrap.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
   /* ── Render all (grouped by category) ── */
   function renderAll(repos, versions){
     var container = document.getElementById('projects-container');
@@ -441,22 +576,31 @@
     var c=document.getElementById('proj-count'), ce=document.getElementById('proj-count-en');
     if(c) c.textContent=repos.length; if(ce) ce.textContent=repos.length;
 
-    /* group */
+    /* group — systematique : chaque topic cat-* obtient sa propre section,
+       meme s'il n'a jamais ete ajoute a CATEGORIES (voir buildCategoryList) */
+    var activeCats = buildCategoryList(repos);
     var groups = {};
-    CATEGORIES.forEach(function(cat){ groups[cat.key]=[]; });
-    repos.forEach(function(r){ var k=getCatKey(r.topics||[]); groups[k].push(r); });
+    activeCats.forEach(function(cat){ groups[cat.key]=[]; });
+    repos.forEach(function(r){
+      var topic = getCatTopic(r.topics||[]);
+      var k = topic && groups[topic] ? topic : 'other';
+      if(groups[k]) groups[k].push(r);
+    });
 
     /* fill version from cache */
     repos.forEach(function(r){
       if(versions[r.name] !== undefined) r._version = versions[r.name];
     });
 
+    renderCatSelector(activeCats, groups);
+
     var globalIdx = 0;
-    CATEGORIES.forEach(function(cat){
+    activeCats.forEach(function(cat){
       var list = groups[cat.key];
       if(!list || list.length===0) return;
 
       var section = el('div','cat-section');
+      section.id = catSectionId(cat.key);
 
       /* header */
       var header = el('div','cat-header');
