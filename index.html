@@ -50,9 +50,9 @@
     .nav-gh{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border:1px solid var(--border);border-radius:6px;font-size:.8rem;font-weight:700;color:var(--muted);transition:all .2s}
     .nav-gh:hover{border-color:var(--gold);color:var(--gold)}
 
-    /* CAT TABS (sticky, en tete de la section projets) */
-    .cat-tabs-bar{position:sticky;top:64px;z-index:150;background:rgba(8,11,24,.92);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:12px;margin-bottom:3rem;padding:.75rem}
-    .cat-tabs{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none}
+    /* CAT TABS (fixe, sous la nav — toujours visible, meme depuis le hero) */
+    .cat-tabs-bar{position:fixed;top:64px;left:0;right:0;height:52px;z-index:190;background:rgba(8,11,24,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 clamp(1.5rem,5vw,4rem)}
+    .cat-tabs{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;width:100%}
     .cat-tabs::-webkit-scrollbar{display:none}
     .cat-tab{display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:.4rem .9rem;font-family:var(--fb);font-size:.78rem;font-weight:700;color:var(--muted);transition:all .18s;flex-shrink:0}
     .cat-tab:hover{color:var(--text);border-color:rgba(255,255,255,.25)}
@@ -60,7 +60,7 @@
     .cat-tab.active{color:#0a0c14;border-color:transparent}
 
     /* HERO */
-    .hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;padding:7rem clamp(1.5rem,5vw,4rem) 4rem;overflow:hidden;text-align:center}
+    .hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;padding:calc(7rem + 52px) clamp(1.5rem,5vw,4rem) 4rem;overflow:hidden;text-align:center}
     #hero-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
     .hero-glow-a{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(168,85,247,.1) 0%,transparent 65%);top:40%;left:20%;transform:translate(-50%,-50%);pointer-events:none}
     .hero-glow-b{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(79,138,255,.1) 0%,transparent 65%);top:60%;right:15%;pointer-events:none}
@@ -90,7 +90,7 @@
     .topic-hint code{color:var(--gold);background:rgba(255,194,75,.08);padding:.1rem .4rem;border-radius:3px;font-size:.7rem}
 
     /* CATEGORY SECTION */
-    .cat-section{margin-bottom:4rem;scroll-margin-top:84px}
+    .cat-section{margin-bottom:4rem;scroll-margin-top:132px}
     .cat-section:last-child{margin-bottom:0}
     .cat-header{display:flex;align-items:center;gap:.85rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border)}
     .cat-icon-wrap{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0}
@@ -175,6 +175,12 @@
   </div>
 </nav>
 
+<div class="cat-tabs-bar">
+  <div class="cat-tabs" id="cat-tabs">
+    <!-- Populated by JS -->
+  </div>
+</div>
+
 <section class="hero">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
   <div class="hero-glow-a"></div>
@@ -204,11 +210,6 @@
 
 <section class="projects-section" id="projects">
   <div class="container">
-    <div class="cat-tabs-bar">
-      <div class="cat-tabs" id="cat-tabs">
-        <!-- Populated by JS -->
-      </div>
-    </div>
     <div class="sec-header">
       <h2 class="sec-title">
         <span class="fr-only">Projets <em>mis en avant</em></span>
