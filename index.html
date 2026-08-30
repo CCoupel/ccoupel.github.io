@@ -50,20 +50,14 @@
     .nav-gh{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border:1px solid var(--border);border-radius:6px;font-size:.8rem;font-weight:700;color:var(--muted);transition:all .2s}
     .nav-gh:hover{border-color:var(--gold);color:var(--gold)}
 
-    /* CAT SELECTOR (nav) */
-    .cat-selector{position:relative}
-    .cat-selector-btn{display:inline-flex;align-items:center;gap:.45rem;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:6px;padding:.35rem .75rem;font-family:var(--fb);font-size:.78rem;font-weight:700;color:var(--text);cursor:pointer;transition:all .15s}
-    .cat-selector-btn:hover{border-color:var(--gold);color:var(--gold)}
-    .cat-selector-btn .csb-caret{font-size:.65rem;color:var(--muted);transition:transform .2s}
-    .cat-selector.open .csb-caret{transform:rotate(180deg)}
-    .cat-selector-menu{position:absolute;top:calc(100% + .6rem);left:0;min-width:220px;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:.4rem;box-shadow:0 12px 32px rgba(0,0,0,.45);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s,transform .15s,visibility .15s}
-    .cat-selector.open .cat-selector-menu{opacity:1;visibility:visible;transform:translateY(0)}
-    .cat-selector-item{display:flex;align-items:center;gap:.6rem;padding:.5rem .6rem;border-radius:6px;font-size:.82rem;font-weight:700;color:var(--text);transition:background .12s}
-    .cat-selector-item:hover{background:rgba(255,255,255,.06)}
-    .cat-selector-item .csi-icon{font-size:1rem;flex-shrink:0}
-    .cat-selector-item .csi-label{flex:1}
-    .cat-selector-item .csi-count{font-size:.68rem;color:var(--muted);font-weight:800}
-    @media (max-width:640px){ .cat-selector-btn .csb-text{display:none} }
+    /* CAT TABS (sticky, en tete de la section projets) */
+    .cat-tabs-bar{position:sticky;top:64px;z-index:150;background:rgba(8,11,24,.92);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:12px;margin-bottom:3rem;padding:.75rem}
+    .cat-tabs{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none}
+    .cat-tabs::-webkit-scrollbar{display:none}
+    .cat-tab{display:inline-flex;align-items:center;gap:.45rem;white-space:nowrap;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:.4rem .9rem;font-family:var(--fb);font-size:.78rem;font-weight:700;color:var(--muted);transition:all .18s;flex-shrink:0}
+    .cat-tab:hover{color:var(--text);border-color:rgba(255,255,255,.25)}
+    .cat-tab .ct-count{font-size:.68rem;font-weight:800;opacity:.7}
+    .cat-tab.active{color:#0a0c14;border-color:transparent}
 
     /* HERO */
     .hero{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;padding:7rem clamp(1.5rem,5vw,4rem) 4rem;overflow:hidden;text-align:center}
@@ -170,17 +164,6 @@
 <nav class="nav">
   <div class="nav-brand">Cyril <em>Coupel</em></div>
   <div class="nav-right">
-    <div class="cat-selector" id="cat-selector">
-      <button class="cat-selector-btn" id="cat-selector-btn" aria-haspopup="true" aria-expanded="false">
-        <span aria-hidden="true">🗂️</span>
-        <span class="csb-text fr-only">Catégories</span>
-        <span class="csb-text en-only">Categories</span>
-        <span class="csb-caret">▾</span>
-      </button>
-      <div class="cat-selector-menu" id="cat-selector-menu" role="menu">
-        <!-- Populated by JS -->
-      </div>
-    </div>
     <div class="lang-switcher" aria-label="Langue / Language">
       <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
       <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
@@ -221,6 +204,11 @@
 
 <section class="projects-section" id="projects">
   <div class="container">
+    <div class="cat-tabs-bar">
+      <div class="cat-tabs" id="cat-tabs">
+        <!-- Populated by JS -->
+      </div>
+    </div>
     <div class="sec-header">
       <h2 class="sec-title">
         <span class="fr-only">Projets <em>mis en avant</em></span>
@@ -522,48 +510,56 @@
     return card;
   }
 
-  /* ── Category selector (nav dropdown) ── */
-  function renderCatSelector(activeCats, groups){
-    var menu = document.getElementById('cat-selector-menu');
-    var wrap = document.getElementById('cat-selector');
-    if(!menu || !wrap) return;
-    while(menu.firstChild) menu.removeChild(menu.firstChild);
+  /* ── Category tabs (sticky, ancrage + surlignage actif au scroll) ── */
+  var catObserver = null;
+
+  function renderCatTabs(activeCats, groups){
+    var wrap = document.querySelector('.cat-tabs-bar');
+    var tabsEl = document.getElementById('cat-tabs');
+    if(!wrap || !tabsEl) return;
+    while(tabsEl.firstChild) tabsEl.removeChild(tabsEl.firstChild);
+
+    var tabEls = [];
     activeCats.forEach(function(cat){
       var count = (groups[cat.key]||[]).length;
       if(count===0) return;
-      var item = el('a','cat-selector-item');
-      item.href = '#' + catSectionId(cat.key);
-      item.setAttribute('role','menuitem');
-      item.addEventListener('click', function(){ wrap.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
-      var icon = el('span','csi-icon'); icon.textContent = cat.icon; item.appendChild(icon);
-      var label = el('span','csi-label'); label.textContent = lang==='fr' ? cat.labelFr : cat.labelEn; item.appendChild(label);
-      var cnt = el('span','csi-count'); cnt.textContent = count; item.appendChild(cnt);
-      menu.appendChild(item);
+      var tab = el('a','cat-tab');
+      var targetId = catSectionId(cat.key);
+      tab.href = '#' + targetId;
+      tab.dataset.target = targetId;
+      tab.dataset.color = cat.color;
+      tab.appendChild(document.createTextNode(cat.icon + ' ' + (lang==='fr'?cat.labelFr:cat.labelEn) + ' '));
+      var cnt = el('span','ct-count'); cnt.textContent = count; tab.appendChild(cnt);
+      tabsEl.appendChild(tab);
+      tabEls.push(tab);
     });
-    /* si une seule categorie (ou aucune), le selecteur n'a pas d'utilite */
-    wrap.style.display = menu.children.length>1 ? '' : 'none';
-  }
 
-  var btn = document.getElementById('cat-selector-btn');
-  if(btn){
-    var selWrap = document.getElementById('cat-selector');
-    btn.addEventListener('click', function(e){
-      e.stopPropagation();
-      var open = selWrap.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    document.addEventListener('click', function(e){
-      if(selWrap.classList.contains('open') && !selWrap.contains(e.target)){
-        selWrap.classList.remove('open');
-        btn.setAttribute('aria-expanded','false');
-      }
-    });
-    document.addEventListener('keydown', function(e){
-      if(e.key==='Escape' && selWrap.classList.contains('open')){
-        selWrap.classList.remove('open');
-        btn.setAttribute('aria-expanded','false');
-      }
-    });
+    /* pas d'onglets utiles si une seule categorie (ou aucune) */
+    wrap.style.display = tabEls.length>1 ? '' : 'none';
+    if(tabEls.length<2) return;
+
+    function setActiveTab(id){
+      tabEls.forEach(function(t){
+        var isActive = t.dataset.target===id;
+        t.classList.toggle('active', isActive);
+        t.style.background = isActive ? t.dataset.color : '';
+        t.style.borderColor = isActive ? t.dataset.color : '';
+      });
+    }
+
+    if(catObserver) catObserver.disconnect();
+    var sections = activeCats.map(function(cat){ return document.getElementById(catSectionId(cat.key)); }).filter(Boolean);
+    if(sections.length && 'IntersectionObserver' in window){
+      catObserver = new IntersectionObserver(function(entries){
+        var visible = entries.filter(function(e){ return e.isIntersecting; });
+        if(visible.length){
+          visible.sort(function(a,b){ return a.boundingClientRect.top - b.boundingClientRect.top; });
+          setActiveTab(visible[0].target.id);
+        }
+      }, {rootMargin:'-110px 0px -65% 0px', threshold:0});
+      sections.forEach(function(s){ catObserver.observe(s); });
+    }
+    setActiveTab(sections.length ? sections[0].id : null);
   }
 
   /* ── Render all (grouped by category) ── */
@@ -592,7 +588,7 @@
       if(versions[r.name] !== undefined) r._version = versions[r.name];
     });
 
-    renderCatSelector(activeCats, groups);
+    renderCatTabs(activeCats, groups);
 
     var globalIdx = 0;
     activeCats.forEach(function(cat){
