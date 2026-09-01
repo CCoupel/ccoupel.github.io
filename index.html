@@ -119,14 +119,16 @@
     /* Description */
     .proj-desc{font-size:.85rem;color:var(--muted);line-height:1.75;flex:1}
 
-    /* Issue counters */
-    .proj-issues{display:flex;gap:.35rem;flex-wrap:wrap;align-items:center;min-height:22px}
-    .proj-issues-loading{font-size:.68rem;color:var(--muted);animation:pulse-ver 1.5s ease infinite}
-    .proj-issue-pill{font-size:.68rem;font-weight:800;padding:.2rem .55rem;border-radius:20px;border:1px solid}
-    .proj-issue-bug{color:#ff6b6b;background:rgba(255,107,107,.08);border-color:rgba(255,107,107,.2)}
-    .proj-issue-feat{color:#a855f7;background:rgba(168,85,247,.08);border-color:rgba(168,85,247,.2)}
-    .proj-issue-total{color:var(--muted);background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
-    .proj-issue-none{font-size:.68rem;font-weight:700;color:#34d399}
+    /* Repo stats: open milestones (hover for list) + release count */
+    .proj-stats{display:flex;gap:.35rem;flex-wrap:wrap;align-items:center;min-height:22px}
+    .proj-stats-loading{font-size:.68rem;color:var(--muted);animation:pulse-ver 1.5s ease infinite}
+    .proj-stat-pill{position:relative;font-size:.68rem;font-weight:800;padding:.2rem .55rem;border-radius:20px;border:1px solid}
+    .proj-stat-milestones{color:var(--blue);background:rgba(79,138,255,.08);border-color:rgba(79,138,255,.2);cursor:help}
+    .proj-stat-releases{color:var(--muted);background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+    .proj-stat-tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:0;z-index:20;min-width:180px;max-width:260px;background:var(--bg3);border:1px solid rgba(79,138,255,.3);border-radius:10px;padding:.5rem .65rem;box-shadow:0 8px 24px rgba(0,0,0,.4);text-align:left}
+    .proj-stat-milestones:hover .proj-stat-tooltip{display:block}
+    .proj-stat-tooltip-item{font-size:.68rem;font-weight:600;color:var(--text);padding:.2rem 0;border-bottom:1px solid var(--border)}
+    .proj-stat-tooltip-item:last-child{border-bottom:none}
 
     /* Topics */
     .proj-topics{display:flex;gap:.35rem;flex-wrap:wrap}
@@ -459,12 +461,12 @@
     /* description */
     var desc = el('p','proj-desc'); desc.textContent=repo.description||(lang==='fr'?'Pas de description disponible.':'No description available.'); body.appendChild(desc);
 
-    /* issue counters */
-    var issuesRow = el('div','proj-issues');
-    issuesRow.id = 'issues-'+repo.name;
-    var iload = el('span','proj-issues-loading'); iload.textContent='···';
-    issuesRow.appendChild(iload);
-    body.appendChild(issuesRow);
+    /* repo stats: open milestones + release count */
+    var statsRow = el('div','proj-stats');
+    statsRow.id = 'stats-'+repo.name;
+    var sload = el('span','proj-stats-loading'); sload.textContent='···';
+    statsRow.appendChild(sload);
+    body.appendChild(statsRow);
 
     /* topics (hide portfolio + cat-* + status-* — only show "other" topics) */
     var visibleTopics = topics.filter(function(t){ return t!=='portfolio' && t.indexOf('cat-')!==0 && t.indexOf('status-')!==0; });
@@ -648,49 +650,51 @@
     }
   }
 
-  /* ── Fill issue counters ── */
-  function fillIssues(repoName, bugs, enhancements, total){
-    var el2 = document.getElementById('issues-'+repoName);
+  /* ── Fill repo stats (open milestones + release count) ── */
+  function fillStats(repoName, releases, milestones){
+    var el2 = document.getElementById('stats-'+repoName);
     if(!el2) return;
     while(el2.firstChild) el2.removeChild(el2.firstChild);
-    if(total===0){
-      var none = el('span','proj-issue-none');
-      none.textContent = lang==='fr' ? '✅ Aucune issue ouverte' : '✅ No open issues';
-      el2.appendChild(none);
-      return;
+    if(milestones.length>0){
+      var msEl = el('span','proj-stat-pill proj-stat-milestones');
+      msEl.textContent = '🗓️ ' + milestones.length + ' ' +
+        (lang==='fr'
+          ? (milestones.length>1 ? 'milestones ouverts' : 'milestone ouvert')
+          : (milestones.length>1 ? 'open milestones' : 'open milestone'));
+      var tip = el('div','proj-stat-tooltip');
+      milestones.forEach(function(title){
+        var item = el('div','proj-stat-tooltip-item');
+        item.textContent = title;
+        tip.appendChild(item);
+      });
+      msEl.appendChild(tip);
+      el2.appendChild(msEl);
     }
-    if(bugs>0){
-      var bugEl = el('span','proj-issue-pill proj-issue-bug');
-      bugEl.textContent='🐛 '+bugs;
-      el2.appendChild(bugEl);
-    }
-    if(enhancements>0){
-      var featEl = el('span','proj-issue-pill proj-issue-feat');
-      featEl.textContent='✨ '+enhancements;
-      el2.appendChild(featEl);
-    }
-    var totEl = el('span','proj-issue-pill proj-issue-total');
-    totEl.textContent='📋 '+total+(lang==='fr'?' ouvertes':' open');
-    el2.appendChild(totEl);
+    var relEl = el('span','proj-stat-pill proj-stat-releases');
+    relEl.textContent = '🏷️ ' + releases + ' ' +
+      (lang==='fr' ? (releases>1 ? 'releases' : 'release') : (releases===1 ? 'release' : 'releases'));
+    el2.appendChild(relEl);
   }
 
-  /* ── Fetch issues (non-blocking, fills in after render) ── */
-  function fetchIssues(repos){
-    repos.forEach(function(repo){
-      fetch('https://api.github.com/repos/CCoupel/'+repo.name+'/issues?state=open&per_page=100')
-        .then(function(r){ if(!r.ok) throw new Error('no issues'); return r.json(); })
-        .then(function(data){
-          /* exclude pull requests — GitHub mixes them in /issues */
-          var issues = data.filter(function(i){ return !i.pull_request; });
-          var bugs = issues.filter(function(i){ return i.labels.some(function(l){ return l.name==='bug'; }); }).length;
-          var enhancements = issues.filter(function(i){ return i.labels.some(function(l){ return l.name==='enhancement'||l.name==='feature'; }); }).length;
-          fillIssues(repo.name, bugs, enhancements, issues.length);
-        })
-        .catch(function(){
-          var el2 = document.getElementById('issues-'+repo.name);
+  /* ── Fetch repo stats (non-blocking, fills in after render) ──
+     Same-origin static file kept up to date by .github/workflows/update-versions.yml
+     (single authenticated GraphQL call, server-side) — avoids one unauthenticated
+     api.github.com call per repo and the 60 req/h rate limit that hits. */
+  function fetchStats(repos){
+    fetch('./repo-stats.json', {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error('no stats data'); return r.json(); })
+      .then(function(data){
+        repos.forEach(function(repo){
+          var s = data[repo.name] || {releases:0, milestones:[]};
+          fillStats(repo.name, s.releases||0, s.milestones||[]);
+        });
+      })
+      .catch(function(){
+        repos.forEach(function(repo){
+          var el2 = document.getElementById('stats-'+repo.name);
           if(el2) while(el2.firstChild) el2.removeChild(el2.firstChild);
         });
-    });
+      });
   }
 
   /* ── Fetch releases (non-blocking, fills in after render) ──
@@ -731,13 +735,13 @@
         cachedRepos = items.length>0 ? items : FALLBACK;
         renderAll(cachedRepos, cachedVersions);
         fetchVersions(cachedRepos);
-        fetchIssues(cachedRepos);
+        fetchStats(cachedRepos);
       })
       .catch(function(){
         cachedRepos = FALLBACK;
         renderAll(cachedRepos, cachedVersions);
         fetchVersions(cachedRepos);
-        fetchIssues(cachedRepos);
+        fetchStats(cachedRepos);
       });
   }
 

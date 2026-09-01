@@ -1,0 +1,66 @@
+{
+  "GhostDrive": {
+    "releases": 17,
+    "milestones": [
+      "v2.5.x",
+      "v3.0.x",
+      "v3.1.x",
+      "vX.X.X",
+      "v2.3 - Sync bidirectionnelle",
+      "v2.4 - Cache avancé & Offline",
+      "v2.2 - Workflow Objets"
+    ]
+  },
+  "Emby_VirtualLib": {
+    "releases": 20,
+    "milestones": [
+      "v1.13.0"
+    ]
+  },
+  "Emby_Badges": {
+    "releases": 6,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
+  },
+  "Ansible-SecAgent": {
+    "releases": 0,
+    "milestones": [
+      "v3.0 — repeater-client/server"
+    ]
+  },
+  "claude_project_template": {
+    "releases": 118,
+    "milestones": []
+  },
+  "BuzzMaster": {
+    "releases": 61,
+    "milestones": [
+      "vX.0.x — DNS & Réseau Captif",
+      "vx.x.x — Scoring Avancé MEMORY",
+      "v9.0 — Roue de la Fortune",
+      "v9.1 — Roue de la Fortune — Extensions",
+      "v10.x — Éclairage ambiance (Philips Hue)",
+      "v11.0 — PICSONARY",
+      "v8.1.0 — Génération IA du pool RAFALE"
+    ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 4,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
+  "Generic-Operator": {
+    "releases": 0,
+    "milestones": []
+  }
+}

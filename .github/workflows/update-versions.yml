@@ -1,4 +1,4 @@
-name: Update versions.json
+name: Update versions.json and repo-stats.json
 
 on:
   schedule:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch latest releases for all portfolio repos (single GraphQL request)
+      - name: Fetch releases, release count and open milestones for all portfolio repos (single GraphQL request)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -28,6 +28,10 @@ jobs:
                 ... on Repository {
                   name
                   latestRelease { tagName }
+                  releases { totalCount }
+                  milestones(states: OPEN, first: 20, orderBy: {field: DUE_DATE, direction: ASC}) {
+                    nodes { title }
+                  }
                 }
               }
             }
@@ -42,13 +46,20 @@ jobs:
             /tmp/graphql-response.json > versions.json
           cat versions.json
 
+          jq '[.data.search.nodes[] | {(.name): {
+                releases: .releases.totalCount,
+                milestones: [.milestones.nodes[].title]
+              }}] | add' \
+            /tmp/graphql-response.json > repo-stats.json
+          cat repo-stats.json
+
       - name: Commit if changed
         run: |
-          if ! git diff --quiet -- versions.json; then
+          if ! git diff --quiet -- versions.json repo-stats.json; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add versions.json
-            git commit -m "chore: update versions.json [skip ci]"
+            git add versions.json repo-stats.json
+            git commit -m "chore: update versions.json and repo-stats.json [skip ci]"
             git push
           else
             echo "No changes"
