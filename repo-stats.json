@@ -51,12 +51,12 @@
     "releases": 5,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 4,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 4,
     "milestones": []
   },
   "Generic-Operator": {
