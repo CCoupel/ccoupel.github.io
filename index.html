@@ -122,11 +122,14 @@
     /* Repo stats: open milestones (hover for list) + release count */
     .proj-stats{display:flex;gap:.35rem;flex-wrap:wrap;align-items:center;min-height:22px}
     .proj-stats-loading{font-size:.68rem;color:var(--muted);animation:pulse-ver 1.5s ease infinite}
-    .proj-stat-pill{position:relative;font-size:.68rem;font-weight:800;padding:.2rem .55rem;border-radius:20px;border:1px solid}
+    .proj-stat-pill{font-size:.68rem;font-weight:800;padding:.2rem .55rem;border-radius:20px;border:1px solid}
     .proj-stat-milestones{color:var(--blue);background:rgba(79,138,255,.08);border-color:rgba(79,138,255,.2);cursor:help}
     .proj-stat-releases{color:var(--muted);background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
-    .proj-stat-tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:0;z-index:20;min-width:180px;max-width:260px;background:var(--bg3);border:1px solid rgba(79,138,255,.3);border-radius:10px;padding:.5rem .65rem;box-shadow:0 8px 24px rgba(0,0,0,.4);text-align:left}
-    .proj-stat-milestones:hover .proj-stat-tooltip{display:block}
+    /* Global tooltip — appended to <body> and positioned via JS (fixed), so it
+       is never clipped by a card's overflow:hidden (needed for the rounded
+       color bar) regardless of which card/where on screen it's triggered from. */
+    .proj-stat-tooltip{display:none;position:fixed;z-index:1000;min-width:180px;max-width:280px;background:var(--bg3);border:1px solid rgba(79,138,255,.3);border-radius:10px;padding:.5rem .65rem;box-shadow:0 8px 24px rgba(0,0,0,.4);text-align:left}
+    .proj-stat-tooltip.visible{display:block}
     .proj-stat-tooltip-item{font-size:.68rem;font-weight:600;color:var(--text);padding:.2rem 0;border-bottom:1px solid var(--border)}
     .proj-stat-tooltip-item:last-child{border-bottom:none}
 
@@ -323,6 +326,31 @@
 
   /* ── Helpers ── */
   function el(tag,cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
+
+  /* Single shared tooltip appended to <body> — positioned via getBoundingClientRect()
+     of whichever pill triggered it, so it always escapes card clipping and screen edges. */
+  var statTooltip = el('div','proj-stat-tooltip');
+  document.body.appendChild(statTooltip);
+
+  function showStatTooltip(anchorEl, titles){
+    while(statTooltip.firstChild) statTooltip.removeChild(statTooltip.firstChild);
+    titles.forEach(function(title){
+      var item = el('div','proj-stat-tooltip-item');
+      item.textContent = title;
+      statTooltip.appendChild(item);
+    });
+    statTooltip.classList.add('visible');
+    var r = anchorEl.getBoundingClientRect();
+    var tw = statTooltip.offsetWidth, th = statTooltip.offsetHeight;
+    var left = Math.min(r.left, window.innerWidth - tw - 8);
+    left = Math.max(8, left);
+    var top = r.top - th - 8;
+    if(top < 8) top = r.bottom + 8; /* not enough room above → flip below */
+    statTooltip.style.left = left + 'px';
+    statTooltip.style.top = top + 'px';
+  }
+
+  function hideStatTooltip(){ statTooltip.classList.remove('visible'); }
 
   function langColor(l){ return LANG_COLORS[l]||LANG_COLORS['default']; }
 
@@ -661,13 +689,8 @@
         (lang==='fr'
           ? (milestones.length>1 ? 'milestones ouverts' : 'milestone ouvert')
           : (milestones.length>1 ? 'open milestones' : 'open milestone'));
-      var tip = el('div','proj-stat-tooltip');
-      milestones.forEach(function(title){
-        var item = el('div','proj-stat-tooltip-item');
-        item.textContent = title;
-        tip.appendChild(item);
-      });
-      msEl.appendChild(tip);
+      msEl.addEventListener('mouseenter', function(){ showStatTooltip(msEl, milestones); });
+      msEl.addEventListener('mouseleave', hideStatTooltip);
       el2.appendChild(msEl);
     }
     var relEl = el('span','proj-stat-pill proj-stat-releases');
