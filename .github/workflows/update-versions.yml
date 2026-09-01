@@ -1,0 +1,55 @@
+name: Update versions.json
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-versions
+  cancel-in-progress: true
+
+jobs:
+  update-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest releases for all portfolio repos (single GraphQL request)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          QUERY='query {
+            search(query: "user:CCoupel topic:portfolio archived:false", type: REPOSITORY, first: 50) {
+              nodes {
+                ... on Repository {
+                  name
+                  latestRelease { tagName }
+                }
+              }
+            }
+          }'
+          BODY=$(jq -n --arg q "$QUERY" '{query:$q}')
+          curl -sf -X POST https://api.github.com/graphql \
+            -H "Authorization: bearer $GH_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "$BODY" > /tmp/graphql-response.json
+
+          jq '[.data.search.nodes[] | {(.name): (.latestRelease.tagName // null)}] | add' \
+            /tmp/graphql-response.json > versions.json
+          cat versions.json
+
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- versions.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add versions.json
+            git commit -m "chore: update versions.json [skip ci]"
+            git push
+          else
+            echo "No changes"
+          fi

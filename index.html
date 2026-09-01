@@ -693,23 +693,27 @@
     });
   }
 
-  /* ── Fetch releases (non-blocking, fills in after render) ── */
+  /* ── Fetch releases (non-blocking, fills in after render) ──
+     Single same-origin request to a static JSON file kept up to date by
+     .github/workflows/update-versions.yml (one authenticated GraphQL call,
+     server-side), instead of one unauthenticated api.github.com call per
+     repo — avoids the 60 req/h GitHub API rate limit. */
   function fetchVersions(repos){
-    repos.forEach(function(repo){
-      fetch('https://api.github.com/repos/CCoupel/'+repo.name+'/releases/latest')
-        .then(function(r){
-          if(!r.ok) throw new Error('no release');
-          return r.json();
-        })
-        .then(function(d){
-          cachedVersions[repo.name] = d.tag_name || null;
-          fillVersion(repo.name, d.tag_name || null);
-        })
-        .catch(function(){
+    fetch('./versions.json', {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error('no versions data'); return r.json(); })
+      .then(function(data){
+        repos.forEach(function(repo){
+          var tag = data[repo.name] || null;
+          cachedVersions[repo.name] = tag;
+          fillVersion(repo.name, tag);
+        });
+      })
+      .catch(function(){
+        repos.forEach(function(repo){
           cachedVersions[repo.name] = null;
           fillVersion(repo.name, null);
         });
-    });
+      });
   }
 
   /* ── Load repos ── */

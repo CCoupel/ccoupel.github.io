@@ -1,0 +1,13 @@
+{
+  "GhostDrive": "v2.1.0",
+  "Emby_VirtualLib": "v1.11.0.0",
+  "Emby_Badges": "v1.1.4",
+  "Ansible-SecAgent": null,
+  "automation-factory": "v2.4.3",
+  "claude_project_template": "v3.0.0",
+  "BuzzMaster": "v7.1.0",
+  "Media_FS": "v1.1.2",
+  "CheckNetwork-Playbook": null,
+  "Claude-Launcher": "v2.25.2",
+  "Generic-Operator": null
+}
