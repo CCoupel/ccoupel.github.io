@@ -21,15 +21,15 @@
     "releases": 6,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
   },
   "claude_project_template": {
     "releases": 118,
