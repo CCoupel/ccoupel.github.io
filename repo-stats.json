@@ -31,6 +31,10 @@
       "v3.0 — repeater-client/server"
     ]
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 62,
     "milestones": [
@@ -44,10 +48,6 @@
       "V9.0.0 - amelioration suite a macevache",
       "Ambiance de musique d'evenement"
     ]
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
   },
   "claude_project_template": {
     "releases": 118,
