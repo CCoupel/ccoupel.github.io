@@ -35,6 +35,10 @@
     "releases": 5,
     "milestones": []
   },
+  "claude_project_template": {
+    "releases": 118,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 62,
     "milestones": [
@@ -48,10 +52,6 @@
       "V9.0.0 - amelioration suite a macevache",
       "Ambiance de musique d'evenement"
     ]
-  },
-  "claude_project_template": {
-    "releases": 118,
-    "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
