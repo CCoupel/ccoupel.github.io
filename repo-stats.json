@@ -57,12 +57,12 @@
     "releases": 0,
     "milestones": []
   },
-  "Generic-Operator": {
-    "releases": 0,
-    "milestones": []
-  },
   "Claude-Launcher": {
     "releases": 4,
+    "milestones": []
+  },
+  "Generic-Operator": {
+    "releases": 0,
     "milestones": []
   }
 }

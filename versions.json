@@ -8,6 +8,6 @@
   "Media_FS": "v1.1.2",
   "claude_project_template": "v3.0.0",
   "CheckNetwork-Playbook": null,
-  "Generic-Operator": null,
-  "Claude-Launcher": "v2.25.5"
+  "Claude-Launcher": "v2.25.5",
+  "Generic-Operator": null
 }
