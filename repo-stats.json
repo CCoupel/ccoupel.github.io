@@ -36,7 +36,7 @@
     "milestones": []
   },
   "BuzzMaster": {
-    "releases": 62,
+    "releases": 63,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -45,7 +45,6 @@
       "v10.0.0 — Éclairage ambiance (Philips Hue)",
       "v11.0 — PICSONARY",
       "v10.1 — Éclairage ambiance — Extensions",
-      "V9.0.0 - amelioration suite a macevache",
       "Ambiance de musique d'evenement"
     ]
   },
