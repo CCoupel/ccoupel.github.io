@@ -1,4 +1,10 @@
 {
+  "Emby_VirtualLib": {
+    "releases": 20,
+    "milestones": [
+      "v1.13.0"
+    ]
+  },
   "GhostDrive": {
     "releases": 17,
     "milestones": [
@@ -9,12 +15,6 @@
       "v2.3 - Sync bidirectionnelle",
       "v2.4 - Cache avancé & Offline",
       "v2.2 - Workflow Objets"
-    ]
-  },
-  "Emby_VirtualLib": {
-    "releases": 20,
-    "milestones": [
-      "v1.13.0"
     ]
   },
   "Emby_Badges": {
@@ -31,10 +31,6 @@
     "releases": 40,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "BuzzMaster": {
     "releases": 63,
     "milestones": [
@@ -49,6 +45,10 @@
       "Jeu PYRAMIDE"
     ]
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "claude_project_template": {
     "releases": 118,
     "milestones": []
@@ -57,12 +57,12 @@
     "releases": 0,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 4,
-    "milestones": []
-  },
   "Generic-Operator": {
     "releases": 0,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 4,
     "milestones": []
   }
 }
