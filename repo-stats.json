@@ -31,6 +31,10 @@
     "releases": 40,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 63,
     "milestones": [
@@ -44,10 +48,6 @@
       "Ambiance de musique d'evenement",
       "Jeu PYRAMIDE"
     ]
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
   },
   "claude_project_template": {
     "releases": 118,
