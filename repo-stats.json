@@ -21,15 +21,15 @@
     "releases": 6,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
   },
   "BuzzMaster": {
     "releases": 63,
