@@ -31,10 +31,6 @@
     "releases": 5,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
-  },
   "BuzzMaster": {
     "releases": 63,
     "milestones": [
@@ -43,21 +39,25 @@
       "v11.0 — Roue de la Fortune",
       "v11.1 — Roue de la Fortune — Extensions",
       "v10.0.0 — Éclairage ambiance (Philips Hue)",
-      "v11.0 — PICSONARY",
+      "v11.0 — PICTIONARY",
       "v10.1 — Éclairage ambiance — Extensions",
       "Ambiance de musique d'evenement",
       "Jeu PYRAMIDE"
     ]
   },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
+  },
   "claude_project_template": {
     "releases": 118,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
+  "Generic-Operator": {
     "releases": 0,
     "milestones": []
   },
-  "Generic-Operator": {
+  "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
