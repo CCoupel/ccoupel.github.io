@@ -27,12 +27,12 @@
       "v3.0 — repeater-client/server"
     ]
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
-  },
   "Media_FS": {
     "releases": 5,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 40,
     "milestones": []
   },
   "BuzzMaster": {
