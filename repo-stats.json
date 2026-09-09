@@ -21,15 +21,19 @@
     "releases": 6,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 63,
@@ -44,10 +48,6 @@
       "Ambiance de musique d'evenement",
       "Jeu PYRAMIDE"
     ]
-  },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
   },
   "claude_project_template": {
     "releases": 118,
