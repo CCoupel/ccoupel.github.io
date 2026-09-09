@@ -27,14 +27,17 @@
       "v3.0 — repeater-client/server"
     ]
   },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
+  },
   "BuzzMaster": {
-    "releases": 63,
+    "releases": 64,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
       "v11.0 — Roue de la Fortune",
       "v11.1 — Roue de la Fortune — Extensions",
-      "v10.0.0 — Éclairage ambiance (Philips Hue)",
       "v11.0 — PICTIONARY",
       "v10.1 — Éclairage ambiance — Extensions",
       "Ambiance de musique d'evenement",
@@ -43,10 +46,6 @@
   },
   "Media_FS": {
     "releases": 5,
-    "milestones": []
-  },
-  "automation-factory": {
-    "releases": 40,
     "milestones": []
   },
   "claude_project_template": {
