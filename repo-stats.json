@@ -27,10 +27,6 @@
       "v3.0 — repeater-client/server"
     ]
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
-  },
   "BuzzMaster": {
     "releases": 64,
     "milestones": [
@@ -43,6 +39,10 @@
       "Ambiance de musique d'evenement",
       "Jeu PYRAMIDE"
     ]
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
   },
   "Media_FS": {
     "releases": 5,
