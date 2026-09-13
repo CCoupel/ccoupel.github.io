@@ -21,15 +21,15 @@
     "releases": 6,
     "milestones": []
   },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
+  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
-  },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
   },
   "BuzzMaster": {
     "releases": 64,
@@ -44,19 +44,19 @@
       "Jeu PYRAMIDE"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "claude_project_template": {
     "releases": 118,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
+  "Media_FS": {
+    "releases": 5,
     "milestones": []
   },
   "Generic-Operator": {
+    "releases": 0,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
