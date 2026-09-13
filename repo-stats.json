@@ -44,19 +44,19 @@
       "Jeu PYRAMIDE"
     ]
   },
-  "claude_project_template": {
-    "releases": 118,
-    "milestones": []
-  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
-  "Generic-Operator": {
-    "releases": 0,
+  "claude_project_template": {
+    "releases": 118,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
+  "Generic-Operator": {
     "releases": 0,
     "milestones": []
   },
