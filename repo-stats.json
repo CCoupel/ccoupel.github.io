@@ -1,10 +1,4 @@
 {
-  "Emby_VirtualLib": {
-    "releases": 20,
-    "milestones": [
-      "v1.13.0"
-    ]
-  },
   "GhostDrive": {
     "releases": 17,
     "milestones": [
@@ -17,8 +11,18 @@
       "v2.2 - Workflow Objets"
     ]
   },
+  "Emby_VirtualLib": {
+    "releases": 20,
+    "milestones": [
+      "v1.13.0"
+    ]
+  },
   "Emby_Badges": {
     "releases": 6,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 40,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -26,10 +30,6 @@
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
-  },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
   },
   "BuzzMaster": {
     "releases": 64,
@@ -52,11 +52,11 @@
     "releases": 118,
     "milestones": []
   },
-  "Generic-Operator": {
+  "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
+  "Generic-Operator": {
     "releases": 0,
     "milestones": []
   },
