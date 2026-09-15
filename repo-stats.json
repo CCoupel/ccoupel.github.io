@@ -21,15 +21,15 @@
     "releases": 6,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 64,
@@ -52,7 +52,7 @@
     "releases": 118,
     "milestones": []
   },
-  "Generic-Operator": {
+  "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
@@ -60,7 +60,7 @@
     "releases": 4,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
+  "Generic-Operator": {
     "releases": 0,
     "milestones": []
   }
