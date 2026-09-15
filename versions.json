@@ -5,8 +5,8 @@
   "automation-factory": "v2.4.3",
   "Ansible-SecAgent": null,
   "BuzzMaster": "v10.0.0",
-  "claude_project_template": "v3.0.0",
   "Media_FS": "v1.1.2",
+  "claude_project_template": "v3.0.0",
   "Generic-Operator": null,
   "CheckNetwork-Playbook": null,
   "Claude-Launcher": "v2.25.5"
