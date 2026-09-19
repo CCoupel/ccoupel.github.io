@@ -33,6 +33,14 @@
       "v3.0 — repeater-client/server"
     ]
   },
+  "claude_project_template": {
+    "releases": 118,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 64,
     "milestones": [
@@ -46,23 +54,15 @@
       "Jeu PYRAMIDE"
     ]
   },
-  "claude_project_template": {
-    "releases": 118,
-    "milestones": []
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "Claude-Launcher": {
     "releases": 5,
     "milestones": []
   },
-  "Generic-Operator": {
+  "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
+  "Generic-Operator": {
     "releases": 0,
     "milestones": []
   }
