@@ -27,19 +27,15 @@
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 118,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 65,
@@ -55,12 +51,16 @@
       "v11.1 — Question sonore"
     ]
   },
-  "Claude-Launcher": {
-    "releases": 5,
+  "claude_project_template": {
+    "releases": 118,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 5,
     "milestones": []
   },
   "Generic-Operator": {
