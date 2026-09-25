@@ -38,7 +38,7 @@
     "milestones": []
   },
   "BuzzMaster": {
-    "releases": 65,
+    "releases": 66,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -47,24 +47,23 @@
       "v13.0 — PICTIONARY",
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
-      "v11.2 — Ambiance de musique d'événement — Extensions",
-      "v11.1 — Question sonore"
+      "v11.2 — Ambiance de musique d'événement — Extensions"
     ]
   },
   "claude_project_template": {
-    "releases": 118,
+    "releases": 122,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 5,
-    "milestones": []
-  },
   "Generic-Operator": {
     "releases": 0,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 7,
     "milestones": []
   }
 }
