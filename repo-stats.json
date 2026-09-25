@@ -17,15 +17,15 @@
       "v1.13.0"
     ]
   },
-  "Emby_Badges": {
-    "releases": 6,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
+  },
+  "Emby_Badges": {
+    "releases": 7,
+    "milestones": []
   },
   "Ansible-SecAgent": {
     "releases": 0,
