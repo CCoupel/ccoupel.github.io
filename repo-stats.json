@@ -62,8 +62,20 @@
     "releases": 0,
     "milestones": []
   },
+  "Emby_shared_playlist": {
+    "releases": 0,
+    "milestones": [
+      "v0.1.0 — Fondations et spike",
+      "v0.2.0 — Marqueur propager-lu et retrait du média lu",
+      "v0.3.0 — Propagation du lu",
+      "v0.4.0 — Aide, permission automatique, guide et sécurité",
+      "v0.5.0 — Cycle de vie et robustesse",
+      "v1.0.0 — Livraison",
+      "v0.3.1 — Propagation de l'avancement"
+    ]
+  },
   "Claude-Launcher": {
-    "releases": 7,
+    "releases": 8,
     "milestones": []
   }
 }
