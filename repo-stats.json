@@ -63,13 +63,13 @@
     "milestones": []
   },
   "Emby_PlaySync": {
-    "releases": 1,
+    "releases": 2,
     "milestones": [
-      "v1.1.0 — Gestion utilisateur"
+      "v1.2.0"
     ]
   },
   "Claude-Launcher": {
-    "releases": 9,
+    "releases": 10,
     "milestones": []
   }
 }

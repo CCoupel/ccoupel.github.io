@@ -9,6 +9,6 @@
   "claude_project_template": "v3.6.0",
   "CheckNetwork-Playbook": null,
   "Generic-Operator": null,
-  "Emby_PlaySync": "v1.0.0",
-  "Claude-Launcher": "v2.25.10"
+  "Emby_PlaySync": "v1.1.0",
+  "Claude-Launcher": "v2.26.0"
 }
