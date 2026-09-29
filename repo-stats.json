@@ -21,16 +21,16 @@
     "releases": 7,
     "milestones": []
   },
-  "Ansible-SecAgent": {
-    "releases": 0,
-    "milestones": [
-      "v3.0 — repeater-client/server"
-    ]
-  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
+    ]
+  },
+  "Ansible-SecAgent": {
+    "releases": 0,
+    "milestones": [
+      "v3.0 — repeater-client/server"
     ]
   },
   "BuzzMaster": {
@@ -58,10 +58,6 @@
     "releases": 0,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 9,
-    "milestones": []
-  },
   "Generic-Operator": {
     "releases": 0,
     "milestones": []
@@ -71,5 +67,9 @@
     "milestones": [
       "v1.1.0 — Gestion utilisateur"
     ]
+  },
+  "Claude-Launcher": {
+    "releases": 9,
+    "milestones": []
   }
 }
