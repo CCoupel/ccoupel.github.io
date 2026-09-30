@@ -21,16 +21,16 @@
     "releases": 7,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": [
-      "v2.4.4 — Versioning X.Y.Z.a"
-    ]
-  },
   "Ansible-SecAgent": {
     "releases": 0,
     "milestones": [
       "v3.0 — repeater-client/server"
+    ]
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": [
+      "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
   "Media_FS": {
