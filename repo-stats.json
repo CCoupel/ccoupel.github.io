@@ -27,12 +27,6 @@
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
-  "Ansible-SecAgent": {
-    "releases": 0,
-    "milestones": [
-      "v3.0 — repeater-client/server"
-    ]
-  },
   "BuzzMaster": {
     "releases": 66,
     "milestones": [
@@ -44,6 +38,12 @@
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
       "v11.2 — Ambiance de musique d'événement — Extensions"
+    ]
+  },
+  "Ansible-SecAgent": {
+    "releases": 0,
+    "milestones": [
+      "v3.0 — repeater-client/server"
     ]
   },
   "Media_FS": {
