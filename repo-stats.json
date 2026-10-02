@@ -40,18 +40,22 @@
       "v11.2 — Ambiance de musique d'événement — Extensions"
     ]
   },
+  "Ansible-SecAgent": {
+    "releases": 1,
+    "milestones": [
+      "v3.0 — Fondations",
+      "v3.1 — Chaîne de relais",
+      "v3.2 — Events et inventaire",
+      "v3.4 — Packaging K8s",
+      "v3.3 — Confiance et signature des liens"
+    ]
+  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
-  "Ansible-SecAgent": {
-    "releases": 1,
-    "milestones": [
-      "v3.0 — repeater-client/server"
-    ]
-  },
   "claude_project_template": {
-    "releases": 131,
+    "releases": 133,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
