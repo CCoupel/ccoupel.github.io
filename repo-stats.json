@@ -27,16 +27,6 @@
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
-  "Ansible-SecAgent": {
-    "releases": 0,
-    "milestones": [
-      "v3.0 — repeater-client/server"
-    ]
-  },
   "BuzzMaster": {
     "releases": 66,
     "milestones": [
@@ -50,8 +40,18 @@
       "v11.2 — Ambiance de musique d'événement — Extensions"
     ]
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
+  "Ansible-SecAgent": {
+    "releases": 1,
+    "milestones": [
+      "v3.0 — repeater-client/server"
+    ]
+  },
   "claude_project_template": {
-    "releases": 122,
+    "releases": 131,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
@@ -63,9 +63,9 @@
     "milestones": []
   },
   "Emby_PlaySync": {
-    "releases": 3,
+    "releases": 4,
     "milestones": [
-      "v1.2.1"
+      "v1.2.2"
     ]
   },
   "Claude-Launcher": {

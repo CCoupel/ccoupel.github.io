@@ -3,12 +3,12 @@
   "Emby_VirtualLib": "v1.11.0.0",
   "Emby_Badges": "v1.2.0",
   "automation-factory": "v2.4.3",
-  "Media_FS": "v1.1.2",
-  "Ansible-SecAgent": null,
   "BuzzMaster": "v11.1.0",
-  "claude_project_template": "v3.6.0",
+  "Media_FS": "v1.1.2",
+  "Ansible-SecAgent": "v2.0.0",
+  "claude_project_template": "v3.9.1",
   "CheckNetwork-Playbook": null,
   "Generic-Operator": null,
-  "Emby_PlaySync": "v1.2.0",
+  "Emby_PlaySync": "v1.2.1",
   "Claude-Launcher": "v2.26.0"
 }
