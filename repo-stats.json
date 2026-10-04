@@ -27,16 +27,6 @@
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
-  "Ansible-SecAgent": {
-    "releases": 1,
-    "milestones": [
-      "v3.0 — Fondations",
-      "v3.1 — Chaîne de relais",
-      "v3.2 — Events et inventaire",
-      "v3.4 — Packaging K8s",
-      "v3.3 — Confiance et signature des liens"
-    ]
-  },
   "BuzzMaster": {
     "releases": 66,
     "milestones": [
@@ -48,6 +38,16 @@
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
       "v11.2 — Ambiance de musique d'événement — Extensions"
+    ]
+  },
+  "Ansible-SecAgent": {
+    "releases": 1,
+    "milestones": [
+      "v3.0 — Fondations",
+      "v3.1 — Chaîne de relais",
+      "v3.2 — Events et inventaire",
+      "v3.4 — Packaging K8s",
+      "v3.3 — Confiance et signature des liens"
     ]
   },
   "Media_FS": {
