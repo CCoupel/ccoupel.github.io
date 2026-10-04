@@ -30,11 +30,9 @@
   "Ansible-SecAgent": {
     "releases": 1,
     "milestones": [
-      "v3.0 — Fondations",
-      "v3.1 — Chaîne de relais",
-      "v3.2 — Events et inventaire",
-      "v3.4 — Packaging K8s",
-      "v3.3 — Confiance et signature des liens"
+      "v3.0.2 — Events et inventaire",
+      "v3.0.4 — Packaging K8s",
+      "v3.0.3 — Confiance et signature des liens"
     ]
   },
   "BuzzMaster": {
