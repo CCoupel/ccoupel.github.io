@@ -27,14 +27,6 @@
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
-  "Ansible-SecAgent": {
-    "releases": 1,
-    "milestones": [
-      "v3.0.2 — Events et inventaire",
-      "v3.0.4 — Packaging K8s",
-      "v3.0.3 — Confiance et signature des liens"
-    ]
-  },
   "BuzzMaster": {
     "releases": 66,
     "milestones": [
@@ -52,8 +44,15 @@
     "releases": 5,
     "milestones": []
   },
+  "Ansible-SecAgent": {
+    "releases": 1,
+    "milestones": [
+      "v3.0.4 — Confiance et signature des liens",
+      "v3.0.3 — Relay actif/passif et état sans SQLite"
+    ]
+  },
   "claude_project_template": {
-    "releases": 133,
+    "releases": 134,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
