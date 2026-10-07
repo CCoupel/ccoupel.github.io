@@ -7,7 +7,7 @@
   "Ansible-SecAgent": "v3.0.3",
   "Media_FS": "v1.1.2",
   "claude_project_template": "v3.13.1",
-  "openshift-course": null,
+  "openshift-course": "v1.0.0",
   "CheckNetwork-Playbook": null,
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
