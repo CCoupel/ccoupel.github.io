@@ -41,10 +41,9 @@
     ]
   },
   "Ansible-SecAgent": {
-    "releases": 1,
+    "releases": 2,
     "milestones": [
-      "v3.0.4 — Confiance et signature des liens",
-      "v3.0.3 — Relay actif/passif et état sans SQLite"
+      "v3.0.4 — Confiance et signature des liens"
     ]
   },
   "Media_FS": {
@@ -52,19 +51,17 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 136,
+    "releases": 138,
     "milestones": []
   },
   "openshift-course": {
-    "releases": 1,
-    "milestones": []
+    "releases": 2,
+    "milestones": [
+      "v1.0.0"
+    ]
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
-    "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 12,
     "milestones": []
   },
   "Generic-Operator": {
@@ -75,12 +72,15 @@
     "releases": 5,
     "milestones": []
   },
+  "Claude-Launcher": {
+    "releases": 12,
+    "milestones": []
+  },
   "ansible-training": {
-    "releases": 1,
+    "releases": 2,
     "milestones": [
       "v0.2.0",
-      "v0.3.0",
-      "v0.1.1"
+      "v1.0.0"
     ]
   }
 }
