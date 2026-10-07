@@ -56,11 +56,15 @@
     "milestones": []
   },
   "openshift-course": {
-    "releases": 0,
+    "releases": 1,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 12,
     "milestones": []
   },
   "Generic-Operator": {
@@ -69,10 +73,6 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
-    "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 12,
     "milestones": []
   },
   "ansible-training": {
