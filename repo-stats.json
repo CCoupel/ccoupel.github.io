@@ -54,15 +54,15 @@
     "releases": 138,
     "milestones": []
   },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
   "openshift-course": {
     "releases": 3,
     "milestones": [
       "v1.0.0"
     ]
-  },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
   },
   "Generic-Operator": {
     "releases": 0,
