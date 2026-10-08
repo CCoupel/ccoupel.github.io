@@ -41,9 +41,10 @@
     ]
   },
   "Ansible-SecAgent": {
-    "releases": 2,
+    "releases": 3,
     "milestones": [
-      "v3.0.4 — Confiance et signature des liens"
+      "v3.0.4 — Confiance et signature des liens",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
   "Media_FS": {
@@ -54,12 +55,12 @@
     "releases": 140,
     "milestones": []
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "openshift-course": {
+    "releases": 3,
     "milestones": []
   },
   "Generic-Operator": {
@@ -75,9 +76,7 @@
     "milestones": []
   },
   "ansible-training": {
-    "releases": 3,
-    "milestones": [
-      "v1.0.0"
-    ]
+    "releases": 4,
+    "milestones": []
   }
 }
