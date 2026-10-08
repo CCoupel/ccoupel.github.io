@@ -51,18 +51,16 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 138,
+    "releases": 140,
+    "milestones": []
+  },
+  "openshift-course": {
+    "releases": 3,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
-  },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": [
-      "v1.0.0"
-    ]
   },
   "Generic-Operator": {
     "releases": 0,
@@ -77,9 +75,8 @@
     "milestones": []
   },
   "ansible-training": {
-    "releases": 2,
+    "releases": 3,
     "milestones": [
-      "v0.2.0",
       "v1.0.0"
     ]
   }

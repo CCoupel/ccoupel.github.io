@@ -6,11 +6,11 @@
   "BuzzMaster": "v11.1.0",
   "Ansible-SecAgent": "v3.0.3",
   "Media_FS": "v1.1.2",
-  "claude_project_template": "v3.13.1",
-  "CheckNetwork-Playbook": null,
+  "claude_project_template": "v3.14.1",
   "openshift-course": "v1.0.0",
+  "CheckNetwork-Playbook": null,
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
   "Claude-Launcher": "v2.27.1",
-  "ansible-training": "v0.1.1"
+  "ansible-training": "v0.2.0"
 }
