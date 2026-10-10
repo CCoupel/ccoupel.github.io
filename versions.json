@@ -9,8 +9,8 @@
   "claude_project_template": "v3.14.1",
   "CheckNetwork-Playbook": null,
   "openshift-course": "v1.0.0",
+  "Claude-Launcher": "v2.27.1",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
-  "Claude-Launcher": "v2.27.1",
   "ansible-training": "v1.0.0"
 }
