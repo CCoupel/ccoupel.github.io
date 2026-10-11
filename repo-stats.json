@@ -21,12 +21,6 @@
     "releases": 7,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": [
-      "v2.4.4 — Versioning X.Y.Z.a"
-    ]
-  },
   "BuzzMaster": {
     "releases": 66,
     "milestones": [
@@ -48,12 +42,18 @@
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": [
+      "v2.4.4 — Versioning X.Y.Z.a"
+    ]
+  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 145,
+    "releases": 146,
     "milestones": []
   },
   "openshift-course": {
