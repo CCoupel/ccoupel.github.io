@@ -22,7 +22,7 @@
     "milestones": []
   },
   "BuzzMaster": {
-    "releases": 66,
+    "releases": 67,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -32,14 +32,7 @@
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
       "v11.3 — Ambiance de musique d'événement — Extensions",
-      "v11.2 — retour terrain semaine bleue 2026"
-    ]
-  },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.4 — Confiance et signature des liens",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+      "v11.2.1"
     ]
   },
   "automation-factory": {
@@ -52,8 +45,15 @@
     "releases": 5,
     "milestones": []
   },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.4 — Confiance et signature des liens",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
   "claude_project_template": {
-    "releases": 146,
+    "releases": 153,
     "milestones": []
   },
   "openshift-course": {
