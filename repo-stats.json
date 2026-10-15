@@ -38,8 +38,12 @@
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
+  "claude_project_template": {
+    "releases": 167,
+    "milestones": []
+  },
   "BuzzMaster": {
-    "releases": 69,
+    "releases": 70,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -48,20 +52,15 @@
       "v13.0 — PICTIONARY",
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
-      "v11.3 — Ambiance de musique d'événement — Extensions",
-      "v11.2.3 — Tests et sécurité"
+      "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
-  "claude_project_template": {
-    "releases": 167,
+  "Claude-Launcher": {
+    "releases": 14,
     "milestones": []
   },
   "openshift-course": {
     "releases": 3,
-    "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 14,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
