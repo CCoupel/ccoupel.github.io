@@ -27,16 +27,16 @@
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
     "releases": 3,
     "milestones": [
       "v3.0.4 — Confiance et signature des liens",
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "claude_project_template": {
     "releases": 163,
