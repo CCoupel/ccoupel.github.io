@@ -39,7 +39,7 @@
     ]
   },
   "BuzzMaster": {
-    "releases": 68,
+    "releases": 69,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -49,11 +49,11 @@
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
       "v11.3 — Ambiance de musique d'événement — Extensions",
-      "v11.2.2"
+      "v11.2.3 — Tests et sécurité"
     ]
   },
   "claude_project_template": {
-    "releases": 166,
+    "releases": 167,
     "milestones": []
   },
   "openshift-course": {
