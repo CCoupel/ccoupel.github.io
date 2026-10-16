@@ -38,10 +38,6 @@
     "releases": 5,
     "milestones": []
   },
-  "claude_project_template": {
-    "releases": 167,
-    "milestones": []
-  },
   "BuzzMaster": {
     "releases": 70,
     "milestones": [
@@ -55,12 +51,16 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
+  "claude_project_template": {
+    "releases": 172,
+    "milestones": []
+  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 14,
+    "releases": 18,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
