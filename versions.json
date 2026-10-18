@@ -8,8 +8,8 @@
   "Ansible-SecAgent": "v3.0.4",
   "Media_FS": "v1.1.2",
   "openshift-course": "v1.0.0",
-  "CheckNetwork-Playbook": null,
   "Claude-Launcher": "v2.29.0",
+  "CheckNetwork-Playbook": null,
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
   "ansible-training": "v1.0.0"
