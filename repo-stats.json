@@ -40,16 +40,16 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
+  "claude_project_template": {
+    "releases": 172,
+    "milestones": []
+  },
   "Ansible-SecAgent": {
     "releases": 3,
     "milestones": [
       "v3.0.4 — Confiance et signature des liens",
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
-  },
-  "claude_project_template": {
-    "releases": 172,
-    "milestones": []
   },
   "Media_FS": {
     "releases": 5,
