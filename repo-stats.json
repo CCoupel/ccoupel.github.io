@@ -17,15 +17,15 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "Emby_Badges": {
-    "releases": 7,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
+  },
+  "Emby_Badges": {
+    "releases": 7,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 70,
@@ -47,12 +47,12 @@
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
-  "claude_project_template": {
-    "releases": 172,
-    "milestones": []
-  },
   "Media_FS": {
     "releases": 5,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 172,
     "milestones": []
   },
   "openshift-course": {
