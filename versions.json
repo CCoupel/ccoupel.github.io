@@ -10,7 +10,7 @@
   "openshift-course": "v1.0.0",
   "Claude-Launcher": "v2.29.0",
   "CheckNetwork-Playbook": null,
-  "ansible-training": "v1.0.0",
   "Generic-Operator": null,
-  "Emby_PlaySync": "v1.2.2"
+  "Emby_PlaySync": "v1.2.2",
+  "ansible-training": "v1.0.0"
 }
