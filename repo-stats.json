@@ -19,7 +19,9 @@
   },
   "Emby_Badges": {
     "releases": 7,
-    "milestones": []
+    "milestones": [
+      "v1.3.0"
+    ]
   },
   "automation-factory": {
     "releases": 40,
