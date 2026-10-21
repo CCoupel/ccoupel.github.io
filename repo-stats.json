@@ -17,15 +17,15 @@
       "v2.2 - Workflow Objets"
     ]
   },
+  "Emby_Badges": {
+    "releases": 7,
+    "milestones": []
+  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
-  },
-  "Emby_Badges": {
-    "releases": 7,
-    "milestones": []
   },
   "BuzzMaster": {
     "releases": 70,
