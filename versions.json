@@ -7,10 +7,10 @@
   "Ansible-SecAgent": "v3.0.4",
   "Media_FS": "v1.1.2",
   "claude_project_template": "v3.25.1",
-  "Claude-Launcher": "v2.29.0",
   "openshift-course": "v1.0.0",
   "CheckNetwork-Playbook": null,
+  "Claude-Launcher": "v2.29.0",
+  "ansible-training": "v1.0.0",
   "Generic-Operator": null,
-  "Emby_PlaySync": "v1.2.2",
-  "ansible-training": "v1.0.0"
+  "Emby_PlaySync": "v1.2.2"
 }
