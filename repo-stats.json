@@ -24,10 +24,8 @@
     ]
   },
   "Emby_Badges": {
-    "releases": 7,
-    "milestones": [
-      "v1.3.0"
-    ]
+    "releases": 8,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 70,
@@ -54,7 +52,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 172,
+    "releases": 176,
     "milestones": []
   },
   "Claude-Launcher": {
