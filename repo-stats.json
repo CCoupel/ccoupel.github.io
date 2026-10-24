@@ -52,7 +52,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 177,
+    "releases": 178,
     "milestones": []
   },
   "openshift-course": {
@@ -60,7 +60,7 @@
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 20,
+    "releases": 24,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
