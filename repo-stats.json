@@ -21,12 +21,6 @@
     "releases": 8,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": [
-      "v2.4.4 — Versioning X.Y.Z.a"
-    ]
-  },
   "BuzzMaster": {
     "releases": 70,
     "milestones": [
@@ -50,6 +44,12 @@
   "Media_FS": {
     "releases": 5,
     "milestones": []
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": [
+      "v2.4.4 — Versioning X.Y.Z.a"
+    ]
   },
   "claude_project_template": {
     "releases": 180,
