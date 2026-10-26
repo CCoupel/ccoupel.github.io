@@ -34,13 +34,6 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.4 — Confiance et signature des liens",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
-    ]
-  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
@@ -49,6 +42,13 @@
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
+    ]
+  },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.4 — Confiance et signature des liens",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
   "claude_project_template": {
@@ -67,12 +67,12 @@
     "releases": 0,
     "milestones": []
   },
-  "Generic-Operator": {
-    "releases": 0,
-    "milestones": []
-  },
   "Emby_PlaySync": {
     "releases": 5,
+    "milestones": []
+  },
+  "Generic-Operator": {
+    "releases": 0,
     "milestones": []
   },
   "ansible-training": {
