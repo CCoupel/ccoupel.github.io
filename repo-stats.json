@@ -38,12 +38,6 @@
     "releases": 5,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": [
-      "v2.4.4 — Versioning X.Y.Z.a"
-    ]
-  },
   "Ansible-SecAgent": {
     "releases": 3,
     "milestones": [
@@ -51,20 +45,26 @@
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": [
+      "v2.4.4 — Versioning X.Y.Z.a"
+    ]
+  },
   "claude_project_template": {
     "releases": 180,
     "milestones": []
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "Claude-Launcher": {
-    "releases": 28,
+    "releases": 32,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "openshift-course": {
+    "releases": 3,
     "milestones": []
   },
   "Emby_PlaySync": {
