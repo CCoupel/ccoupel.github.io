@@ -17,10 +17,6 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "Emby_Badges": {
-    "releases": 9,
-    "milestones": []
-  },
   "BuzzMaster": {
     "releases": 70,
     "milestones": [
@@ -34,9 +30,20 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
+  "Emby_Badges": {
+    "releases": 9,
+    "milestones": []
+  },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
+  },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.4 — Confiance et signature des liens",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
   },
   "openshift-course": {
     "releases": 3,
@@ -50,13 +57,6 @@
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
-    ]
-  },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.4 — Confiance et signature des liens",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
   "Claude-Launcher": {
