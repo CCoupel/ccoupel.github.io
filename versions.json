@@ -1,16 +1,16 @@
 {
   "Emby_VirtualLib": "v1.11.0.0",
   "GhostDrive": "v2.1.0",
-  "BuzzMaster": "v11.2.3",
   "Emby_Badges": "v1.4.0",
   "CheckNetwork-Playbook": null,
-  "Ansible-SecAgent": "v3.0.4",
   "openshift-course": "v1.0.0",
-  "Media_FS": "v1.1.2",
+  "Ansible-SecAgent": "v3.0.4",
   "automation-factory": "v2.4.3",
+  "Media_FS": "v1.1.2",
   "Claude-Launcher": "v4.4.0",
   "ansible-training": "v1.0.0",
   "claude_project_template": "v3.29.1",
+  "BuzzMaster": "v11.2.3",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2"
 }

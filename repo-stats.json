@@ -17,25 +17,16 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "BuzzMaster": {
-    "releases": 70,
-    "milestones": [
-      "vX.0.x — DNS & Réseau Captif",
-      "vx.x.x — Scoring Avancé MEMORY",
-      "v12.0 — Roue de la Fortune",
-      "v12.1 — Roue de la Fortune — Extensions",
-      "v13.0 — PICTIONARY",
-      "v15.0 — Éclairage ambiance — Extensions",
-      "v14.0 — Jeu PYRAMIDE",
-      "v11.3 — Ambiance de musique d'événement — Extensions"
-    ]
-  },
   "Emby_Badges": {
     "releases": 9,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "openshift-course": {
+    "releases": 3,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -45,19 +36,15 @@
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "Claude-Launcher": {
     "releases": 41,
@@ -70,6 +57,19 @@
   "claude_project_template": {
     "releases": 183,
     "milestones": []
+  },
+  "BuzzMaster": {
+    "releases": 70,
+    "milestones": [
+      "vX.0.x — DNS & Réseau Captif",
+      "vx.x.x — Scoring Avancé MEMORY",
+      "v12.0 — Roue de la Fortune",
+      "v12.1 — Roue de la Fortune — Extensions",
+      "v13.0 — PICTIONARY",
+      "v15.0 — Éclairage ambiance — Extensions",
+      "v14.0 — Jeu PYRAMIDE",
+      "v11.3 — Ambiance de musique d'événement — Extensions"
+    ]
   },
   "Generic-Operator": {
     "releases": 0,
