@@ -25,10 +25,6 @@
     "releases": 0,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
@@ -39,6 +35,10 @@
       "v3.0.4 — Confiance et signature des liens",
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "automation-factory": {
     "releases": 40,
