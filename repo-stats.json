@@ -32,6 +32,10 @@
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
+  "openshift-course": {
+    "releases": 3,
+    "milestones": []
+  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
@@ -41,10 +45,6 @@
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
-  },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
   },
   "Claude-Launcher": {
     "releases": 41,
@@ -63,10 +63,6 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
-  "claude_project_template": {
-    "releases": 183,
-    "milestones": []
-  },
   "ansible-training": {
     "releases": 4,
     "milestones": []
@@ -77,6 +73,10 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 183,
     "milestones": []
   }
 }
