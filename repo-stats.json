@@ -42,8 +42,8 @@
     "releases": 0,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
+  "ansible-training": {
+    "releases": 4,
     "milestones": []
   },
   "BuzzMaster": {
@@ -59,12 +59,12 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
-  "ansible-training": {
-    "releases": 4,
+  "Media_FS": {
+    "releases": 5,
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 41,
+    "releases": 43,
     "milestones": []
   },
   "Generic-Operator": {
@@ -76,7 +76,11 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 183,
+    "releases": 189,
+    "milestones": []
+  },
+  "Emby_BookMeta": {
+    "releases": 2,
     "milestones": []
   }
 }
