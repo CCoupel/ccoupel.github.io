@@ -21,16 +21,6 @@
     "releases": 9,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 40,
-    "milestones": [
-      "v2.4.4 — Versioning X.Y.Z.a"
-    ]
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
@@ -40,6 +30,12 @@
     "milestones": [
       "v3.0.4 — Confiance et signature des liens",
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
+  "automation-factory": {
+    "releases": 40,
+    "milestones": [
+      "v2.4.4 — Versioning X.Y.Z.a"
     ]
   },
   "CheckNetwork-Playbook": {
@@ -61,6 +57,10 @@
   },
   "ansible-training": {
     "releases": 4,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
     "milestones": []
   },
   "Claude-Launcher": {
