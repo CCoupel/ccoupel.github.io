@@ -42,6 +42,10 @@
     "releases": 0,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 70,
     "milestones": [
@@ -57,10 +61,6 @@
   },
   "ansible-training": {
     "releases": 4,
-    "milestones": []
-  },
-  "Media_FS": {
-    "releases": 5,
     "milestones": []
   },
   "Claude-Launcher": {
