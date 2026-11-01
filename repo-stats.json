@@ -25,12 +25,6 @@
     "releases": 3,
     "milestones": []
   },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
-    ]
-  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
@@ -39,10 +33,6 @@
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
-    "milestones": []
-  },
-  "ansible-training": {
-    "releases": 4,
     "milestones": []
   },
   "BuzzMaster": {
@@ -58,12 +48,22 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
   "Claude-Launcher": {
     "releases": 45,
+    "milestones": []
+  },
+  "ansible-training": {
+    "releases": 4,
     "milestones": []
   },
   "Generic-Operator": {
