@@ -28,7 +28,6 @@
   "Ansible-SecAgent": {
     "releases": 3,
     "milestones": [
-      "v3.0.4 — Confiance et signature des liens",
       "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
@@ -64,7 +63,7 @@
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 43,
+    "releases": 45,
     "milestones": []
   },
   "Generic-Operator": {
@@ -76,7 +75,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 189,
+    "releases": 192,
     "milestones": []
   },
   "Emby_BookMeta": {
