@@ -48,18 +48,22 @@
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
   },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
-    ]
-  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
   "Claude-Launcher": {
     "releases": 45,
+    "milestones": []
+  },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
+  "claude_project_template": {
+    "releases": 192,
     "milestones": []
   },
   "ansible-training": {
@@ -72,10 +76,6 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 192,
     "milestones": []
   },
   "Emby_BookMeta": {
