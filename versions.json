@@ -6,12 +6,12 @@
   "automation-factory": "v2.4.3",
   "CheckNetwork-Playbook": null,
   "Media_FS": "v1.1.2",
-  "BuzzMaster": "v11.2.3",
   "Ansible-SecAgent": "v3.0.4",
-  "Claude-Launcher": "v4.7.0",
+  "Claude-Launcher": "v4.9.0",
+  "BuzzMaster": "v11.2.3",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
   "ansible-training": "v1.0.0",
-  "claude_project_template": "v4.0.0",
+  "claude_project_template": "v4.1.0",
   "Emby_BookMeta": "v1.0.0"
 }

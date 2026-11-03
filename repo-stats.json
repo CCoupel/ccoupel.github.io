@@ -39,6 +39,17 @@
     "releases": 5,
     "milestones": []
   },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.6 — Événements de relais et de routage (hooks)",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
+  "Claude-Launcher": {
+    "releases": 47,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 70,
     "milestones": [
@@ -51,16 +62,6 @@
       "v14.0 — Jeu PYRAMIDE",
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
-  },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
-    ]
-  },
-  "Claude-Launcher": {
-    "releases": 45,
-    "milestones": []
   },
   "Generic-Operator": {
     "releases": 0,
@@ -75,7 +76,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 193,
+    "releases": 196,
     "milestones": []
   },
   "Emby_BookMeta": {
