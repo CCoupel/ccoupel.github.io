@@ -25,15 +25,19 @@
     "releases": 3,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 40,
     "milestones": [
       "v2.4.4 — Versioning X.Y.Z.a"
     ]
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 70,
@@ -47,10 +51,6 @@
       "v14.0 — Jeu PYRAMIDE",
       "v11.3 — Ambiance de musique d'événement — Extensions"
     ]
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
   },
   "Ansible-SecAgent": {
     "releases": 3,
