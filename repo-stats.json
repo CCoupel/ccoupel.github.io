@@ -26,10 +26,8 @@
     "milestones": []
   },
   "automation-factory": {
-    "releases": 40,
-    "milestones": [
-      "v2.4.4 — Versioning X.Y.Z.a"
-    ]
+    "releases": 41,
+    "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
@@ -38,13 +36,6 @@
   "Media_FS": {
     "releases": 5,
     "milestones": []
-  },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.6 — Événements de relais et de routage (hooks)",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
-    ]
   },
   "Claude-Launcher": {
     "releases": 47,
@@ -71,12 +62,19 @@
     "releases": 5,
     "milestones": []
   },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.6 — Événements de relais et de routage (hooks)",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
   "ansible-training": {
     "releases": 4,
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 196,
+    "releases": 198,
     "milestones": []
   },
   "Emby_BookMeta": {
