@@ -21,12 +21,12 @@
     "releases": 9,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
     "milestones": []
   },
   "automation-factory": {
@@ -51,9 +51,13 @@
       "v13.0 — PICTIONARY",
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
-      "v11.3 — Ambiance de musique d'événement — Extensions",
+      "v11.5 — Ambiance de musique d'événement — Extensions",
       "v11.4.0 — RAFALE Alphabétique"
     ]
+  },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
   },
   "Ansible-SecAgent": {
     "releases": 3,
@@ -70,12 +74,8 @@
     "releases": 5,
     "milestones": []
   },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
   "claude_project_template": {
-    "releases": 198,
+    "releases": 199,
     "milestones": []
   },
   "Emby_BookMeta": {
