@@ -25,12 +25,12 @@
     "releases": 0,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 41,
     "milestones": []
   },
   "Media_FS": {
@@ -40,13 +40,6 @@
   "Claude-Launcher": {
     "releases": 47,
     "milestones": []
-  },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.6 — Événements de relais et de routage (hooks)",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
-    ]
   },
   "BuzzMaster": {
     "releases": 70,
@@ -60,6 +53,13 @@
       "v14.0 — Jeu PYRAMIDE",
       "v11.3 — Ambiance de musique d'événement — Extensions",
       "v11.4.0 — RAFALE Alphabétique"
+    ]
+  },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.6 — Événements de relais et de routage (hooks)",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
   "Generic-Operator": {
