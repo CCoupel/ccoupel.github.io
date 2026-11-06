@@ -37,6 +37,17 @@
     "releases": 5,
     "milestones": []
   },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
+  },
+  "Ansible-SecAgent": {
+    "releases": 3,
+    "milestones": [
+      "v3.0.6 — Événements de relais et de routage (hooks)",
+      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+    ]
+  },
   "Claude-Launcher": {
     "releases": 47,
     "milestones": []
@@ -53,17 +64,6 @@
       "v14.0 — Jeu PYRAMIDE",
       "v11.5 — Ambiance de musique d'événement — Extensions",
       "v11.4.0 — RAFALE Alphabétique"
-    ]
-  },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
-  "Ansible-SecAgent": {
-    "releases": 3,
-    "milestones": [
-      "v3.0.6 — Événements de relais et de routage (hooks)",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
     ]
   },
   "Generic-Operator": {
