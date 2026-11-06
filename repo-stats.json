@@ -17,12 +17,12 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "Emby_Badges": {
-    "releases": 9,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
+    "milestones": []
+  },
+  "Emby_Badges": {
+    "releases": 9,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
@@ -33,27 +33,14 @@
     "releases": 41,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
-    "releases": 3,
+    "releases": 4,
     "milestones": [
-      "v3.0.6 — Événements de relais et de routage (hooks)",
-      "v3.0.5 — Durcissement et dettes issues de v3.0.4"
+      "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "Claude-Launcher": {
-    "releases": 47,
-    "milestones": []
-  },
   "BuzzMaster": {
-    "releases": 70,
+    "releases": 71,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -62,9 +49,25 @@
       "v13.0 — PICTIONARY",
       "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
-      "v11.5 — Ambiance de musique d'événement — Extensions",
-      "v11.4.0 — RAFALE Alphabétique"
+      "v11.6.0 — Ambiance de musique d'événement — Extensions",
+      "v11.5.0 — Optimisation des tests"
     ]
+  },
+  "Claude-Launcher": {
+    "releases": 47,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 201,
+    "milestones": []
   },
   "Generic-Operator": {
     "releases": 0,
@@ -72,10 +75,6 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 199,
     "milestones": []
   },
   "Emby_BookMeta": {
