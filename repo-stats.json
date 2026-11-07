@@ -21,30 +21,32 @@
     "releases": 9,
     "milestones": []
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 41,
+    "milestones": []
+  },
+  "openshift-course": {
+    "releases": 3,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
+  "Ansible-SecAgent": {
+    "releases": 4,
+    "milestones": [
+      "v3.0.6 — Événements de relais et de routage (hooks)"
+    ]
+  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 47,
-    "milestones": []
-  },
-  "Ansible-SecAgent": {
-    "releases": 4,
+    "releases": 48,
     "milestones": [
-      "v3.0.6 — Événements de relais et de routage (hooks)"
+      "v5.1.0"
     ]
   },
   "BuzzMaster": {
@@ -74,8 +76,11 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 201,
-    "milestones": []
+    "releases": 202,
+    "milestones": [
+      "v5.0.0",
+      "v5.1.0"
+    ]
   },
   "Emby_BookMeta": {
     "releases": 2,
