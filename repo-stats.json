@@ -17,20 +17,28 @@
       "v2.2 - Workflow Objets"
     ]
   },
+  "Emby_Badges": {
+    "releases": 9,
+    "milestones": []
+  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
   },
-  "Emby_Badges": {
-    "releases": 9,
+  "automation-factory": {
+    "releases": 41,
     "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 41,
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 47,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -53,20 +61,8 @@
       "v11.5.0 — Optimisation des tests"
     ]
   },
-  "Claude-Launcher": {
-    "releases": 47,
-    "milestones": []
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "ansible-training": {
     "releases": 4,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 201,
     "milestones": []
   },
   "Generic-Operator": {
@@ -75,6 +71,10 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 201,
     "milestones": []
   },
   "Emby_BookMeta": {
