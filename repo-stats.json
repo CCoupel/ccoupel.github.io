@@ -33,18 +33,18 @@
     "releases": 41,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "Ansible-SecAgent": {
     "releases": 4,
     "milestones": [
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 59,
+  "ansible-training": {
+    "releases": 4,
     "milestones": []
   },
   "BuzzMaster": {
@@ -61,10 +61,6 @@
       "v11.5.0 — Optimisation des tests"
     ]
   },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
   "Generic-Operator": {
     "releases": 0,
     "milestones": []
@@ -75,6 +71,10 @@
   },
   "claude_project_template": {
     "releases": 206,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 63,
     "milestones": []
   },
   "Emby_BookMeta": {
