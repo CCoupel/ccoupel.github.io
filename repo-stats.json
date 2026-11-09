@@ -17,10 +17,6 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "Emby_Badges": {
-    "releases": 9,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
@@ -33,14 +29,20 @@
     "releases": 3,
     "milestones": []
   },
+  "Emby_Badges": {
+    "releases": 9,
+    "milestones": []
+  },
   "Ansible-SecAgent": {
     "releases": 4,
     "milestones": [
+      "v3.0.7",
+      "v3.0.8",
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
+  "claude_project_template": {
+    "releases": 209,
     "milestones": []
   },
   "ansible-training": {
@@ -48,22 +50,18 @@
     "milestones": []
   },
   "BuzzMaster": {
-    "releases": 71,
+    "releases": 72,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
       "v12.0 — Roue de la Fortune",
       "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
-      "v15.0 — Éclairage ambiance — Extensions",
       "v14.0 — Jeu PYRAMIDE",
-      "v11.6.0 — Ambiance de musique d'événement — Extensions",
-      "v11.5.0 — Optimisation des tests"
+      "v11.7.0 — Ambiance lumière : nouveaux effets de salle",
+      "v11.8.0 — Ambiance : définir ses propres scènes",
+      "v11.6.0 — Ambiance : portée étendue (son, types de question, manches)"
     ]
-  },
-  "claude_project_template": {
-    "releases": 206,
-    "milestones": []
   },
   "Generic-Operator": {
     "releases": 0,
@@ -74,7 +72,14 @@
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 63,
+    "releases": 65,
+    "milestones": [
+      "v5.7.1",
+      "v5.7.2"
+    ]
+  },
+  "Media_FS": {
+    "releases": 5,
     "milestones": []
   },
   "Emby_BookMeta": {
