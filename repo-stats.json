@@ -21,10 +21,6 @@
     "releases": 9,
     "milestones": []
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
@@ -33,8 +29,8 @@
     "releases": 41,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
+  "openshift-course": {
+    "releases": 3,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -42,6 +38,10 @@
     "milestones": [
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "ansible-training": {
     "releases": 4,
@@ -61,16 +61,16 @@
       "v11.5.0 — Optimisation des tests"
     ]
   },
+  "claude_project_template": {
+    "releases": 206,
+    "milestones": []
+  },
   "Generic-Operator": {
     "releases": 0,
     "milestones": []
   },
   "Emby_PlaySync": {
     "releases": 5,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 206,
     "milestones": []
   },
   "Claude-Launcher": {
