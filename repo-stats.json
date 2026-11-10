@@ -17,20 +17,12 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
+  "Emby_Badges": {
+    "releases": 9,
     "milestones": []
   },
   "openshift-course": {
     "releases": 3,
-    "milestones": []
-  },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
-  "Emby_Badges": {
-    "releases": 9,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -41,8 +33,20 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
+  "automation-factory": {
+    "releases": 41,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
+  },
   "BuzzMaster": {
-    "releases": 72,
+    "releases": 73,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
@@ -55,15 +59,7 @@
       "v11.6.0 — Ambiance : portée étendue (son, types de question, manches)"
     ]
   },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
-  "Generic-Operator": {
-    "releases": 0,
-    "milestones": []
-  },
-  "Emby_PlaySync": {
+  "Media_FS": {
     "releases": 5,
     "milestones": []
   },
@@ -74,7 +70,11 @@
       "v5.7.2"
     ]
   },
-  "Media_FS": {
+  "Generic-Operator": {
+    "releases": 0,
+    "milestones": []
+  },
+  "Emby_PlaySync": {
     "releases": 5,
     "milestones": []
   },
