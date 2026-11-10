@@ -21,12 +21,12 @@
     "releases": 0,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 41,
     "milestones": []
   },
   "Emby_Badges": {
@@ -41,14 +41,6 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "claude_project_template": {
-    "releases": 209,
-    "milestones": []
-  },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
   "BuzzMaster": {
     "releases": 72,
     "milestones": [
@@ -62,6 +54,10 @@
       "v11.8.0 — Ambiance : définir ses propres scènes",
       "v11.6.0 — Ambiance : portée étendue (son, types de question, manches)"
     ]
+  },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
   },
   "Generic-Operator": {
     "releases": 0,
@@ -80,6 +76,10 @@
   },
   "Media_FS": {
     "releases": 5,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 209,
     "milestones": []
   },
   "Emby_BookMeta": {
