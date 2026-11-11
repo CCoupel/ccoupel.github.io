@@ -7,11 +7,11 @@
   "Ansible-SecAgent": "v3.0.5",
   "CheckNetwork-Playbook": null,
   "BuzzMaster": "v11.6.0",
+  "claude_project_template": "v5.6.0",
+  "Claude-Launcher": "v5.7.4",
+  "Media_FS": "v1.1.2",
   "ansible-training": "v1.0.0",
-  "Claude-Launcher": "v5.7.2",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
-  "claude_project_template": "v5.5.0",
-  "Media_FS": "v1.1.2",
   "Emby_BookMeta": "v1.0.0"
 }

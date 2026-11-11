@@ -50,35 +50,31 @@
       "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
       "v14.0 — Jeu PYRAMIDE",
-      "v11.7.0 — Ambiance lumière : nouveaux effets de salle",
       "v11.8.0 — Ambiance : définir ses propres scènes",
-      "v11.6.0 — Ambiance : portée étendue (son, types de question, manches)"
+      "v11.7.0 — Ambiance lumière : nouveaux effets de salle"
     ]
+  },
+  "claude_project_template": {
+    "releases": 210,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 67,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "ansible-training": {
     "releases": 4,
     "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 65,
-    "milestones": [
-      "v5.7.1",
-      "v5.7.2"
-    ]
   },
   "Generic-Operator": {
     "releases": 0,
     "milestones": []
   },
   "Emby_PlaySync": {
-    "releases": 5,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 209,
-    "milestones": []
-  },
-  "Media_FS": {
     "releases": 5,
     "milestones": []
   },
