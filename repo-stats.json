@@ -25,6 +25,10 @@
     "releases": 3,
     "milestones": []
   },
+  "automation-factory": {
+    "releases": 41,
+    "milestones": []
+  },
   "Ansible-SecAgent": {
     "releases": 4,
     "milestones": [
@@ -33,16 +37,8 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
-    "milestones": []
-  },
-  "ansible-training": {
-    "releases": 4,
     "milestones": []
   },
   "BuzzMaster": {
@@ -59,8 +55,8 @@
       "v11.6.0 — Ambiance : portée étendue (son, types de question, manches)"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
+  "ansible-training": {
+    "releases": 4,
     "milestones": []
   },
   "Claude-Launcher": {
@@ -80,6 +76,10 @@
   },
   "claude_project_template": {
     "releases": 209,
+    "milestones": []
+  },
+  "Media_FS": {
+    "releases": 5,
     "milestones": []
   },
   "Emby_BookMeta": {
