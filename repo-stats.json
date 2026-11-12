@@ -29,14 +29,6 @@
     "releases": 41,
     "milestones": []
   },
-  "Ansible-SecAgent": {
-    "releases": 4,
-    "milestones": [
-      "v3.0.7",
-      "v3.0.8",
-      "v3.0.6 — Événements de relais et de routage (hooks)"
-    ]
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
@@ -58,12 +50,20 @@
     "releases": 210,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 67,
-    "milestones": []
-  },
   "Media_FS": {
     "releases": 5,
+    "milestones": []
+  },
+  "Ansible-SecAgent": {
+    "releases": 4,
+    "milestones": [
+      "v3.0.7",
+      "v3.0.8",
+      "v3.0.6 — Événements de relais et de routage (hooks)"
+    ]
+  },
+  "Claude-Launcher": {
+    "releases": 67,
     "milestones": []
   },
   "ansible-training": {
