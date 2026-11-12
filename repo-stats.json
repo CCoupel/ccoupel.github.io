@@ -33,26 +33,26 @@
     "releases": 0,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 70,
+    "milestones": [
+      "v6.0.0 - Windows natif"
+    ]
+  },
   "BuzzMaster": {
-    "releases": 73,
+    "releases": 75,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
       "v12.0 — Roue de la Fortune",
       "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
-      "v14.0 — Jeu PYRAMIDE",
-      "v11.8.0 — Ambiance : définir ses propres scènes",
-      "v11.7.0 — Ambiance lumière : nouveaux effets de salle"
+      "v14.0 — Jeu PYRAMIDE"
     ]
-  },
-  "claude_project_template": {
-    "releases": 210,
-    "milestones": []
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
   },
   "Ansible-SecAgent": {
     "releases": 4,
@@ -61,10 +61,6 @@
       "v3.0.8",
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
-  },
-  "Claude-Launcher": {
-    "releases": 67,
-    "milestones": []
   },
   "ansible-training": {
     "releases": 4,
@@ -80,6 +76,10 @@
   },
   "Emby_BookMeta": {
     "releases": 2,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 214,
     "milestones": []
   }
 }

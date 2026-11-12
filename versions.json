@@ -5,13 +5,13 @@
   "openshift-course": "v1.0.0",
   "automation-factory": "v2.4.4",
   "CheckNetwork-Playbook": null,
-  "BuzzMaster": "v11.6.0",
-  "claude_project_template": "v5.6.0",
   "Media_FS": "v1.1.2",
+  "Claude-Launcher": "v5.10.0",
+  "BuzzMaster": "v11.8.0",
   "Ansible-SecAgent": "v3.0.5",
-  "Claude-Launcher": "v5.7.4",
   "ansible-training": "v1.0.0",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
-  "Emby_BookMeta": "v1.0.0"
+  "Emby_BookMeta": "v1.0.0",
+  "claude_project_template": "v5.9.1"
 }
