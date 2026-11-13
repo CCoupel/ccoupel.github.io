@@ -34,14 +34,10 @@
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 70,
+    "releases": 71,
     "milestones": [
-      "v6.0.0 - Windows natif"
+      "v6.1.0 - Configuration et panes repliables"
     ]
-  },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
   },
   "BuzzMaster": {
     "releases": 75,
@@ -53,6 +49,10 @@
       "v13.0 — PICTIONARY",
       "v14.0 — Jeu PYRAMIDE"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "Ansible-SecAgent": {
     "releases": 4,
@@ -79,7 +79,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 214,
+    "releases": 215,
     "milestones": []
   }
 }
