@@ -33,15 +33,15 @@
     "releases": 0,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "Claude-Launcher": {
     "releases": 70,
     "milestones": [
       "v6.0.0 - Windows natif"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 75,
