@@ -29,12 +29,6 @@
     "releases": 41,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 71,
-    "milestones": [
-      "v6.1.0 - Configuration et panes repliables"
-    ]
-  },
   "BuzzMaster": {
     "releases": 75,
     "milestones": [
@@ -44,6 +38,12 @@
       "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
       "v14.0 — Jeu PYRAMIDE"
+    ]
+  },
+  "Claude-Launcher": {
+    "releases": 72,
+    "milestones": [
+      "v6.2.0"
     ]
   },
   "Media_FS": {
@@ -62,14 +62,6 @@
     "releases": 4,
     "milestones": []
   },
-  "Generic-Operator": {
-    "releases": 0,
-    "milestones": []
-  },
-  "Emby_PlaySync": {
-    "releases": 5,
-    "milestones": []
-  },
   "Emby_BookMeta": {
     "releases": 2,
     "milestones": []
@@ -78,8 +70,16 @@
     "releases": 0,
     "milestones": []
   },
+  "Generic-Operator": {
+    "releases": 0,
+    "milestones": []
+  },
+  "Emby_PlaySync": {
+    "releases": 5,
+    "milestones": []
+  },
   "claude_project_template": {
-    "releases": 215,
+    "releases": 217,
     "milestones": []
   }
 }
