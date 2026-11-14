@@ -9,8 +9,8 @@
   "Media_FS": "v1.1.2",
   "Ansible-SecAgent": "v3.0.5",
   "ansible-training": "v1.0.0",
-  "Emby_BookMeta": "v1.0.0",
   "CheckNetwork-Playbook": null,
+  "Emby_BookMeta": "v1.0.0",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
   "claude_project_template": "v5.9.4"
