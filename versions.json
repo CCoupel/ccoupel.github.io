@@ -4,7 +4,6 @@
   "Emby_Badges": "v1.4.0",
   "openshift-course": "v1.0.0",
   "automation-factory": "v2.4.4",
-  "CheckNetwork-Playbook": null,
   "Claude-Launcher": "v6.0.0",
   "BuzzMaster": "v11.8.0",
   "Media_FS": "v1.1.2",
@@ -13,5 +12,6 @@
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
   "Emby_BookMeta": "v1.0.0",
+  "CheckNetwork-Playbook": null,
   "claude_project_template": "v5.9.2"
 }

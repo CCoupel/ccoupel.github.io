@@ -29,10 +29,6 @@
     "releases": 41,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
-  },
   "Claude-Launcher": {
     "releases": 71,
     "milestones": [
@@ -76,6 +72,10 @@
   },
   "Emby_BookMeta": {
     "releases": 2,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
     "milestones": []
   },
   "claude_project_template": {
