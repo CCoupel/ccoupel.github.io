@@ -29,27 +29,9 @@
     "releases": 9,
     "milestones": []
   },
-  "BuzzMaster": {
-    "releases": 75,
-    "milestones": [
-      "vX.0.x — DNS & Réseau Captif",
-      "vx.x.x — Scoring Avancé MEMORY",
-      "v12.0 — Roue de la Fortune",
-      "v12.1 — Roue de la Fortune — Extensions",
-      "v13.0 — PICTIONARY",
-      "v14.0 — Jeu PYRAMIDE"
-    ]
-  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 72,
-    "milestones": [
-      "v6.3.0 — Kubernetisation du launcher",
-      "v6.2.0"
-    ]
   },
   "Ansible-SecAgent": {
     "releases": 4,
@@ -59,17 +41,24 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
+  "BuzzMaster": {
+    "releases": 75,
+    "milestones": [
+      "vX.0.x — DNS & Réseau Captif",
+      "vx.x.x — Scoring Avancé MEMORY",
+      "v12.1 — Roue de la Fortune — Extensions",
+      "v13.0 — PICTIONARY",
+      "v14.0 — Jeu PYRAMIDE",
+      "v12.0.0 — Roue de la Fortune"
+    ]
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
-  },
-  "Emby_BookMeta": {
-    "releases": 2,
-    "milestones": []
+  "Claude-Launcher": {
+    "releases": 73,
+    "milestones": [
+      "v7.0.0 — Launcher SaaS multi-utilisateur",
+      "v6.4.0 — Accès public authentifié",
+      "v6.3.0 — Kubernetisation du launcher"
+    ]
   },
   "Generic-Operator": {
     "releases": 0,
@@ -77,6 +66,18 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
+    "milestones": []
+  },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
+  },
+  "Emby_BookMeta": {
+    "releases": 2,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
     "milestones": []
   },
   "claude_project_template": {
