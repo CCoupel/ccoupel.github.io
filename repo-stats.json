@@ -17,10 +17,6 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "Emby_Badges": {
-    "releases": 9,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
@@ -29,15 +25,8 @@
     "releases": 41,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 72,
-    "milestones": [
-      "v6.3.0 — Kubernetisation du launcher",
-      "v6.2.0"
-    ]
-  },
-  "Media_FS": {
-    "releases": 5,
+  "Emby_Badges": {
+    "releases": 9,
     "milestones": []
   },
   "BuzzMaster": {
@@ -49,6 +38,17 @@
       "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
       "v14.0 — Jeu PYRAMIDE"
+    ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 72,
+    "milestones": [
+      "v6.3.0 — Kubernetisation du launcher",
+      "v6.2.0"
     ]
   },
   "Ansible-SecAgent": {
@@ -63,20 +63,20 @@
     "releases": 4,
     "milestones": []
   },
-  "Generic-Operator": {
+  "CheckNetwork-Playbook": {
     "releases": 0,
-    "milestones": []
-  },
-  "Emby_PlaySync": {
-    "releases": 5,
     "milestones": []
   },
   "Emby_BookMeta": {
     "releases": 2,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
+  "Generic-Operator": {
     "releases": 0,
+    "milestones": []
+  },
+  "Emby_PlaySync": {
+    "releases": 5,
     "milestones": []
   },
   "claude_project_template": {
