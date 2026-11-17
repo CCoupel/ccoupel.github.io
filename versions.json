@@ -5,13 +5,13 @@
   "Emby_Badges": "v1.4.0",
   "openshift-course": "v1.0.0",
   "Media_FS": "v1.1.2",
-  "BuzzMaster": "v11.8.0",
+  "BuzzMaster": "v12.0.0",
   "Ansible-SecAgent": "v3.0.5",
-  "Claude-Launcher": "v6.2.0",
+  "Claude-Launcher": "v6.3.0",
+  "Emby_BookMeta": "v1.0.0",
   "ansible-training": "v1.0.0",
   "CheckNetwork-Playbook": null,
-  "Emby_BookMeta": "v1.0.0",
   "Generic-Operator": null,
   "Emby_PlaySync": "v1.2.2",
-  "claude_project_template": "v5.10.1"
+  "claude_project_template": "v5.11.1"
 }

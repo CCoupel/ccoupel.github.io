@@ -34,14 +34,13 @@
     "milestones": []
   },
   "BuzzMaster": {
-    "releases": 75,
+    "releases": 76,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
       "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
-      "v14.0 — Jeu PYRAMIDE",
-      "v12.0.0 — Roue de la Fortune"
+      "v14.0 — Jeu PYRAMIDE"
     ]
   },
   "Ansible-SecAgent": {
@@ -53,12 +52,15 @@
     ]
   },
   "Claude-Launcher": {
-    "releases": 73,
+    "releases": 74,
     "milestones": [
       "v7.0.0 — Launcher SaaS multi-utilisateur",
-      "v6.4.0 — Accès public authentifié",
-      "v6.3.0 — Kubernetisation du launcher"
+      "v6.4.0 — Backends distants et confort"
     ]
+  },
+  "Emby_BookMeta": {
+    "releases": 2,
+    "milestones": []
   },
   "ansible-training": {
     "releases": 4,
@@ -66,10 +68,6 @@
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
-    "milestones": []
-  },
-  "Emby_BookMeta": {
-    "releases": 2,
     "milestones": []
   },
   "Generic-Operator": {
@@ -81,7 +79,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 219,
+    "releases": 221,
     "milestones": []
   }
 }
