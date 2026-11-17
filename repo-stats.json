@@ -17,10 +17,6 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 41,
     "milestones": []
@@ -29,17 +25,13 @@
     "releases": 9,
     "milestones": []
   },
+  "openshift-course": {
+    "releases": 3,
+    "milestones": []
+  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
-  },
-  "Ansible-SecAgent": {
-    "releases": 4,
-    "milestones": [
-      "v3.0.7",
-      "v3.0.8",
-      "v3.0.6 — Événements de relais et de routage (hooks)"
-    ]
   },
   "BuzzMaster": {
     "releases": 75,
@@ -52,6 +44,14 @@
       "v12.0.0 — Roue de la Fortune"
     ]
   },
+  "Ansible-SecAgent": {
+    "releases": 4,
+    "milestones": [
+      "v3.0.7",
+      "v3.0.8",
+      "v3.0.6 — Événements de relais et de routage (hooks)"
+    ]
+  },
   "Claude-Launcher": {
     "releases": 73,
     "milestones": [
@@ -60,24 +60,24 @@
       "v6.3.0 — Kubernetisation du launcher"
     ]
   },
-  "Generic-Operator": {
-    "releases": 0,
-    "milestones": []
-  },
-  "Emby_PlaySync": {
-    "releases": 5,
-    "milestones": []
-  },
   "ansible-training": {
     "releases": 4,
+    "milestones": []
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
     "milestones": []
   },
   "Emby_BookMeta": {
     "releases": 2,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
+  "Generic-Operator": {
     "releases": 0,
+    "milestones": []
+  },
+  "Emby_PlaySync": {
+    "releases": 5,
     "milestones": []
   },
   "claude_project_template": {
