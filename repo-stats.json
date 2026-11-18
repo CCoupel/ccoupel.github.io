@@ -25,9 +25,20 @@
     "releases": 3,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "Emby_Badges": {
     "releases": 9,
     "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 74,
+    "milestones": [
+      "v7.0.0 — Launcher SaaS multi-utilisateur",
+      "v6.4.0 — Backends distants et confort"
+    ]
   },
   "BuzzMaster": {
     "releases": 76,
@@ -39,16 +50,9 @@
       "v14.0 — Jeu PYRAMIDE"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
+  "Emby_BookMeta": {
+    "releases": 2,
     "milestones": []
-  },
-  "Claude-Launcher": {
-    "releases": 74,
-    "milestones": [
-      "v7.0.0 — Launcher SaaS multi-utilisateur",
-      "v6.4.0 — Backends distants et confort"
-    ]
   },
   "Ansible-SecAgent": {
     "releases": 4,
@@ -62,20 +66,16 @@
     "releases": 0,
     "milestones": []
   },
-  "Emby_BookMeta": {
-    "releases": 2,
-    "milestones": []
-  },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
   "Generic-Operator": {
     "releases": 0,
     "milestones": []
   },
   "Emby_PlaySync": {
     "releases": 5,
+    "milestones": []
+  },
+  "ansible-training": {
+    "releases": 4,
     "milestones": []
   },
   "claude_project_template": {
