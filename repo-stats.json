@@ -21,16 +21,12 @@
     "releases": 41,
     "milestones": []
   },
-  "Emby_Badges": {
-    "releases": 9,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
+  "Emby_Badges": {
+    "releases": 9,
     "milestones": []
   },
   "BuzzMaster": {
@@ -43,13 +39,9 @@
       "v14.0 — Jeu PYRAMIDE"
     ]
   },
-  "Ansible-SecAgent": {
-    "releases": 4,
-    "milestones": [
-      "v3.0.7",
-      "v3.0.8",
-      "v3.0.6 — Événements de relais et de routage (hooks)"
-    ]
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "Claude-Launcher": {
     "releases": 74,
@@ -58,16 +50,24 @@
       "v6.4.0 — Backends distants et confort"
     ]
   },
+  "Ansible-SecAgent": {
+    "releases": 4,
+    "milestones": [
+      "v3.0.7",
+      "v3.0.8",
+      "v3.0.6 — Événements de relais et de routage (hooks)"
+    ]
+  },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
   "Emby_BookMeta": {
     "releases": 2,
     "milestones": []
   },
   "ansible-training": {
     "releases": 4,
-    "milestones": []
-  },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
     "milestones": []
   },
   "Generic-Operator": {
