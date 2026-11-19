@@ -33,13 +33,6 @@
     "releases": 9,
     "milestones": []
   },
-  "Claude-Launcher": {
-    "releases": 74,
-    "milestones": [
-      "v7.0.0 — Launcher SaaS multi-utilisateur",
-      "v6.4.0 — Backends distants et confort"
-    ]
-  },
   "BuzzMaster": {
     "releases": 76,
     "milestones": [
@@ -50,10 +43,6 @@
       "v14.0 — Jeu PYRAMIDE"
     ]
   },
-  "Emby_BookMeta": {
-    "releases": 2,
-    "milestones": []
-  },
   "Ansible-SecAgent": {
     "releases": 4,
     "milestones": [
@@ -62,8 +51,27 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
+  "Emby_BookMeta": {
+    "releases": 2,
+    "milestones": []
+  },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 74,
+    "milestones": [
+      "v7.0.0 — Launcher SaaS multi-utilisateur",
+      "v6.4.0 — Backends distants et confort"
+    ]
+  },
+  "ansible-training": {
+    "releases": 4,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 221,
     "milestones": []
   },
   "Generic-Operator": {
@@ -72,14 +80,6 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
-    "milestones": []
-  },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
-  "claude_project_template": {
-    "releases": 221,
     "milestones": []
   }
 }
