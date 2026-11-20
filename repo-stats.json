@@ -21,16 +21,16 @@
     "releases": 3,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
   "Emby_Badges": {
     "releases": 9,
     "milestones": []
   },
   "Media_FS": {
     "releases": 5,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 41,
     "milestones": []
   },
   "BuzzMaster": {
@@ -51,19 +51,20 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
-  },
   "Emby_BookMeta": {
     "releases": 2,
     "milestones": []
   },
+  "CheckNetwork-Playbook": {
+    "releases": 0,
+    "milestones": []
+  },
   "Claude-Launcher": {
-    "releases": 75,
+    "releases": 76,
     "milestones": [
       "v7.0.0 — Launcher SaaS multi-utilisateur",
-      "v6.5.0 — Fiabilisation"
+      "v6.7.0",
+      "v6.6.0 — Gestion des projets"
     ]
   },
   "ansible-training": {
@@ -79,7 +80,7 @@
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 221,
+    "releases": 222,
     "milestones": []
   }
 }
