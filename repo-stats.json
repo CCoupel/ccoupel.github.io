@@ -21,10 +21,6 @@
     "releases": 5,
     "milestones": []
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "Emby_Badges": {
     "releases": 9,
     "milestones": []
@@ -33,14 +29,18 @@
     "releases": 41,
     "milestones": []
   },
+  "openshift-course": {
+    "releases": 3,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 76,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
-      "v12.1 — Roue de la Fortune — Extensions",
       "v13.0 — PICTIONARY",
-      "v14.0 — Jeu PYRAMIDE"
+      "v14.0 — Jeu PYRAMIDE",
+      "v12.1.0 — Roue de la Fortune — Extensions"
     ]
   },
   "Ansible-SecAgent": {
