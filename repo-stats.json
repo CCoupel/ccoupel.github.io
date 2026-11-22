@@ -25,12 +25,12 @@
     "releases": 9,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
+    "milestones": []
+  },
+  "automation-factory": {
+    "releases": 41,
     "milestones": []
   },
   "BuzzMaster": {
