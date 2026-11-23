@@ -21,16 +21,12 @@
     "releases": 9,
     "milestones": []
   },
-  "automation-factory": {
-    "releases": 41,
-    "milestones": []
-  },
   "openshift-course": {
     "releases": 3,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
+  "automation-factory": {
+    "releases": 41,
     "milestones": []
   },
   "BuzzMaster": {
@@ -38,16 +34,17 @@
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
-      "v13.0 — PICTIONARY",
-      "v14.0 — Jeu PYRAMIDE"
+      "v14.0 — Jeu PYRAMIDE",
+      "v13.1.0 — PICTO RAFALE",
+      "v13.0.0 — PICTO"
     ]
+  },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
-    "milestones": []
-  },
-  "Emby_BookMeta": {
-    "releases": 2,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -67,17 +64,21 @@
     "milestones": []
   },
   "Claude-Launcher": {
-    "releases": 78,
+    "releases": 80,
     "milestones": [
       "v7.0.0 — Launcher SaaS multi-utilisateur"
     ]
+  },
+  "Emby_BookMeta": {
+    "releases": 2,
+    "milestones": []
   },
   "ansible-training": {
     "releases": 4,
     "milestones": []
   },
   "claude_project_template": {
-    "releases": 224,
+    "releases": 231,
     "milestones": []
   }
 }
