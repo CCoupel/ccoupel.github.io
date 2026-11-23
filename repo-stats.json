@@ -29,6 +29,10 @@
     "releases": 3,
     "milestones": []
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "BuzzMaster": {
     "releases": 78,
     "milestones": [
@@ -38,12 +42,12 @@
       "v14.0 — Jeu PYRAMIDE"
     ]
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
+    "milestones": []
+  },
+  "Emby_BookMeta": {
+    "releases": 2,
     "milestones": []
   },
   "Ansible-SecAgent": {
@@ -53,10 +57,6 @@
       "v3.0.8",
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
-  },
-  "Emby_BookMeta": {
-    "releases": 2,
-    "milestones": []
   },
   "Generic-Operator": {
     "releases": 0,
