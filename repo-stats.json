@@ -17,10 +17,6 @@
       "v2.2 - Workflow Objets"
     ]
   },
-  "Emby_Badges": {
-    "releases": 9,
-    "milestones": []
-  },
   "automation-factory": {
     "releases": 41,
     "milestones": []
@@ -33,14 +29,9 @@
     "releases": 3,
     "milestones": []
   },
-  "BuzzMaster": {
-    "releases": 79,
-    "milestones": [
-      "vX.0.x — DNS & Réseau Captif",
-      "vx.x.x — Scoring Avancé MEMORY",
-      "v14.0 — Jeu PYRAMIDE",
-      "v13.1.0 — PICTO RAFALE"
-    ]
+  "Emby_Badges": {
+    "releases": 9,
+    "milestones": []
   },
   "Ansible-SecAgent": {
     "releases": 4,
@@ -50,23 +41,27 @@
       "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
-  "Claude-Launcher": {
-    "releases": 81,
+  "BuzzMaster": {
+    "releases": 79,
     "milestones": [
-      "v7.0.0 — Launcher SaaS multi-utilisateur"
+      "vX.0.x — DNS & Réseau Captif",
+      "vx.x.x — Scoring Avancé MEMORY",
+      "v14.0 — Jeu PYRAMIDE",
+      "v13.1.0 — PICTO RAFALE"
     ]
-  },
-  "Generic-Operator": {
-    "releases": 0,
-    "milestones": []
-  },
-  "Emby_PlaySync": {
-    "releases": 5,
-    "milestones": []
   },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
+  },
+  "Claude-Launcher": {
+    "releases": 82,
+    "milestones": [
+      "v7.1.0 — Agent d'espace et stockage utilisateur",
+      "v7.2.0 — Comptes, espaces et limites",
+      "v7.3.0 — Partage de projets",
+      "v7.0.0 — Accès authentifié du launcher (mono-utilisateur)"
+    ]
   },
   "Emby_BookMeta": {
     "releases": 2,
@@ -76,8 +71,16 @@
     "releases": 4,
     "milestones": []
   },
+  "Generic-Operator": {
+    "releases": 0,
+    "milestones": []
+  },
+  "Emby_PlaySync": {
+    "releases": 5,
+    "milestones": []
+  },
   "claude_project_template": {
-    "releases": 233,
+    "releases": 234,
     "milestones": []
   }
 }
