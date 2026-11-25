@@ -25,21 +25,13 @@
     "releases": 41,
     "milestones": []
   },
-  "openshift-course": {
-    "releases": 3,
-    "milestones": []
-  },
   "Media_FS": {
     "releases": 5,
     "milestones": []
   },
-  "Ansible-SecAgent": {
-    "releases": 4,
-    "milestones": [
-      "v3.0.7",
-      "v3.0.8",
-      "v3.0.6 — Événements de relais et de routage (hooks)"
-    ]
+  "openshift-course": {
+    "releases": 3,
+    "milestones": []
   },
   "BuzzMaster": {
     "releases": 79,
@@ -48,6 +40,14 @@
       "vx.x.x — Scoring Avancé MEMORY",
       "v14.0 — Jeu PYRAMIDE",
       "v13.1.0 — PICTO RAFALE"
+    ]
+  },
+  "Ansible-SecAgent": {
+    "releases": 4,
+    "milestones": [
+      "v3.0.7",
+      "v3.0.8",
+      "v3.0.6 — Événements de relais et de routage (hooks)"
     ]
   },
   "Claude-Launcher": {
@@ -64,16 +64,16 @@
     "releases": 5,
     "milestones": []
   },
-  "ansible-training": {
-    "releases": 4,
-    "milestones": []
-  },
   "CheckNetwork-Playbook": {
     "releases": 0,
     "milestones": []
   },
   "Emby_BookMeta": {
     "releases": 2,
+    "milestones": []
+  },
+  "ansible-training": {
+    "releases": 4,
     "milestones": []
   },
   "claude_project_template": {
