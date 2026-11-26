@@ -25,10 +25,6 @@
     "releases": 3,
     "milestones": []
   },
-  "Media_FS": {
-    "releases": 5,
-    "milestones": []
-  },
   "Emby_Badges": {
     "releases": 9,
     "milestones": []
@@ -42,37 +38,35 @@
     ]
   },
   "BuzzMaster": {
-    "releases": 79,
+    "releases": 80,
     "milestones": [
       "vX.0.x — DNS & Réseau Captif",
       "vx.x.x — Scoring Avancé MEMORY",
-      "v14.0 — Jeu PYRAMIDE",
-      "v13.1.0 — PICTO RAFALE"
+      "v14.0 — Jeu PYRAMIDE"
     ]
   },
+  "Media_FS": {
+    "releases": 5,
+    "milestones": []
+  },
   "Claude-Launcher": {
-    "releases": 82,
+    "releases": 83,
     "milestones": [
-      "v7.1.0 — Agent d'espace et stockage utilisateur",
       "v7.2.0 — Comptes, espaces et limites",
       "v7.3.0 — Partage de projets",
-      "v7.0.0 — Accès authentifié du launcher (mono-utilisateur)"
+      "v7.1.0 — Espace par utilisateur et backends de l'utilisateur"
     ]
   },
   "Emby_BookMeta": {
     "releases": 2,
     "milestones": []
   },
-  "CheckNetwork-Playbook": {
-    "releases": 0,
-    "milestones": []
-  },
   "ansible-training": {
     "releases": 4,
     "milestones": []
   },
-  "claude_project_template": {
-    "releases": 234,
+  "CheckNetwork-Playbook": {
+    "releases": 0,
     "milestones": []
   },
   "Generic-Operator": {
@@ -81,6 +75,10 @@
   },
   "Emby_PlaySync": {
     "releases": 5,
+    "milestones": []
+  },
+  "claude_project_template": {
+    "releases": 234,
     "milestones": []
   }
 }
